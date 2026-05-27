@@ -1,0 +1,1 @@
+function sectionNumbers(){document.querySelectorAll("h1,h2,h3,h4,h5,h6,.toc-menu li a").forEach(function(e){for(var o of e.childNodes)o.nodeType===o.TEXT_NODE&&(o.nodeValue=o.nodeValue.replace(/((\d+\.)*(\d+))\. /,"$1  "))})}window.addEventListener("load",sectionNumbers,!0);

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Specification: design.js, Builder Syntax, and UUID :: BSI Developer Books</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" type="image/svg+xml" href="../../../_/pink-logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../_/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../_/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../_/apple-touch-icon.png">
+    <link rel="mask-icon" href="../../../_/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="msapplication-config" href="../../../_/browserconfig.xml">
+    <link rel="manifest" href="../../../_/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="article cx-design">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">BSI Developer Books</a>
+      <div class="navbar-item search hide-for-print" role="search">
+        <div id="search-field" class="field">
+          <input id="search-input" type="search" placeholder="Search" >
+        </div>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item navbar-item-logo">
+          <span class="logo">
+              <a href="https://www.bsi-software.com/"><img src="../doc-introduction.html/../../../_/img/bsi-logo-inverted.svg" alt="BSI"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="cx-design" data-version="24.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Design Usage Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../doc-introduction.html">CX Design Developer Handbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../old-docs/introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../old-docs/design-json.html">Design JSON</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle" aria-label="open or close"></button>
+    <a class="nav-link" href="../old-docs/content-element-section.html">Content Element Section</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../old-docs/content-element-section.html#content-editor-specific-css">Content editor specific CSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../old-docs/content-element-section.html#bracket-links">Predefined Story outlets (Bracket Links)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../old-docs/content-element-section.html#bracket-links">Predefined Story outlets (Bracket Links)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle" aria-label="open or close"></button>
+    <a class="nav-link" href="../old-docs/content-element-section.html#content-elements-and-parts">Content Elements and Parts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../old-docs/content-element-section.html#grouping">Grouping</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle" aria-label="open or close"></button>
+    <a class="nav-link" href="../old-docs/content-element-section.html#parts">Parts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#plain-text">Plain Text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#formatted-text">Formatted Text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#html">HTML</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#video">Video</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#image">Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#background-image">Background Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#table">Table</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#iterator">Iterator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#news-snippets">News Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#form">Form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#form-field">Form Field</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#form-checkbox">Form Checkbox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#form-textarea">Form Textarea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#form-select">Form Select</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#form-radio">Form Radio</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#link">Link</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#social-follow">Social Follow</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#social-share">Social Share</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../old-docs/content-element-section.html#url-provider">Url Provider</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../old-docs/content-element-section.html#data-bsi-attributes">Data BSI Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../old-docs/content-element-section.html#website">Websites</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../old-docs/cx-design-build.html">CX Design Build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../old-docs/migration_guide.html">Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../old-docs/help.html">Help &amp; Support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Design Usage Documentation</span>
+    <span class="version">24.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Design Usage Documentation</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">24.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../doc-introduction.html" class="home-link" aria-label="Home"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Design Usage Documentation</a></li>
+    <li><a href="03-design-js-spec.html">Specification: design.js, Builder Syntax, and UUID</a></li>
+  </ul>
+</nav>
+<address class="feedback"><a href="mailto:design@bsi-software.com?subject=BSI%20Developer%20Books%3a%20Feedback%20for%20Design Usage Documentation&body=Feedback%20for%20/cx-design/24.2/02-core-dev/03-design-js-spec.html" title="Missing something? Send us an e-mail!">Send Suggestion</a></address>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Specification: design.js, Builder Syntax, and UUID</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ex 2.1 (The Basics) + Wiki:  Builder Syntax (cx.design, cx.contentElement) and withId() for Parts. Includes Design-Reference from the Wiki.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="basics"><a class="anchor local" href="#basics"></a>The Basics</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+BSI CX 22.0 introduced the <code>design.json</code> file, which replaces the previously used <code>design.properties</code> file. Information on the legacy <code>design.properties</code> can be found in the <a href="https://bsi-software.github.io/bsi-cx-docs/">CX design documentation</a> for CX version 1.3 or earlier.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+If you are using the <a href="05-twig-templates.html#designbuild" class="xref page">CX Design Build</a>, the <code>design.json</code> file is generated automatically and no manual adjustments should be made to this file.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>Metadata for a design is defined in the <code>design.json</code> file. It contains general information on the design, such as the name and author, as well as element specific information, such as with which description and icon the elements are to be displayed to the right of the editor.</p>
+</div>
+<div class="listingblock">
+<div class="title">Specifying design meta data</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "title": "My Customer Design",
+  "author": "John Doe, Doe Design Agency"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Group information, content element specific entries, configuration capabilities for styles (allowing you to mixin different CSS styles or adding certain features using JavaScript) as well as instructions on how to customize the rich text editor experience can be found in the subsequent chapters.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example of a fully featured design.json file</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "__REM000": "-------------------- Metadata --------------------",
+  "title": "My Customer Design",
+  "author": "John Doe, Doe Design Agency",
+  "schemaVersion": "22.0",
+  "defaultLocale": "en",
+  "__REM001": "-------------------- Content-Elements, -Groups and -Parts --------------------",
+  "contentElementGroups": [
+    {
+      "groupId": "buttons-and-links",
+      "label": "Buttons &amp; Links",
+      "contentElements": [
+        {
+          "elementId": "button",
+          "label": "Button",
+          "icon": "megaphone",
+          "file": "content-elements/button.html",
+          "parts": [
+            {
+              "partId": "link",
+              "label": "Button"
+            }
+          ],
+          "styleConfigs": [
+            "background-color"
+          ]
+        }
+      ]
+    },
+    {
+      "groupId": "text-and-images",
+      "label": "Text &amp; Images",
+      "contentElements": [
+        {
+          "elementId": "text",
+          "label": "Text",
+          "icon": "text",
+          "file": "content-elements/text.html",
+          "parts": [
+            {
+              "partId": "formatted-text",
+              "label": "Text",
+              "htmlEditorConfig": "custom"
+
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "__REM002": "-------------------- Style Configs --------------------",
+  "styleConfigs": {
+    "background-color": {
+      "label": "Background color",
+      "styles": [
+        {
+          "styleId": "background-color-green",
+          "label": "Green",
+          "cssClass": "green-background"
+        },
+        {
+          "styleId": "background-color-red",
+          "label": "Red",
+          "cssClass": "red-background"
+        }
+      ]
+    }
+  },
+  "__REM003": "-------------------- HTML Editor Configs --------------------",
+  "htmlEditorConfigs": {
+    "custom": {
+      "features": [
+        "bold",
+        "italic",
+        "underline",
+        "textColor"
+      ],
+        "textColors": [
+          "#16616d",
+          "#383e42"
+      ]
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<address class="feedback"><strong>Are you missing something on this page?</strong><br>
+<a href="mailto:design@bsi-software.com?subject=BSI%20Developer%20Books%3a%20Feedback%20for%20Design Usage Documentation&body=/cx-design/24.2/02-core-dev/03-design-js-spec.html">Send us an e-mail</a> and let us know.
+</address>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © BSI Business Systems Integration AG. All rights reserved. Please read the
+    <a href="../doc-introduction.html/../../../pink-book//disclaimer.html">Disclaimer</a>
+    for more information about the site
+    and the <a href="https://www.bsi-software.com/en/privacy-policy">Privacy Policy</a>
+    for more information about our web analytics.
+  </p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/section-numbers.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/call-outs.js"></script>
+<script async src="../../../_/js/glossary.js"></script>
+<script async src="../../../_/js/texts.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

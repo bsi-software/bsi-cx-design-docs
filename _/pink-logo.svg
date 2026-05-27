@@ -1,0 +1,11 @@
+<svg version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     width="200" height="200"
+     viewBox="-3, -3, 203, 203">
+<description>Pink Book Logo</description>
+<rect x="0" y="0" width="100" height="100" fill="#ffd8e3" stroke="white" stroke-width="6"/>
+<rect x="100" y="0" width="100" height="100" fill="#ff769f" stroke="white" stroke-width="6"/>
+<rect x="0" y="100" width="100" height="100" fill="#0082a1" stroke="white" stroke-width="6"/>
+<rect x="100" y="100" width="100" height="100" fill="#8dc7d5" stroke="white" stroke-width="6"/>
+</svg>
