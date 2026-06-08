@@ -1,7 +1,7 @@
 .search-result-dropdown-menu {
   position: absolute;
   z-index: 100;
-  display: flex;
+  display: block;
   right: 0;
   left: inherit;
   top: 100%;
@@ -12,8 +12,11 @@
   height: auto;
   background: transparent;
   border: none;
-  max-width: 900px;
-  min-width: 700px;
+  max-width: 600px;
+  min-width: 500px;
+  box-shadow:
+    0 1px 0 0 rgb(0 0 0 / 20%),
+    0 2px 3px 0 rgb(0 0 0 / 10%);
 }
 
 @media screen and (max-width: 768px) {
@@ -22,151 +25,9 @@
   }
 }
 
-/* Maximized search results */
-@media screen and (min-width: 1024px) {
-  .navbar-item.max {
-    position: unset;
-  }
-  .max .search-result-dropdown-menu {
-    display: absolute;
-    left: 0;
-    max-width: 100%;
-  }
-  .max .search-result-dataset {
-    flex: auto;
-  }
-  .max .search-result-document-title {
-    flex: 0 1 234px; /* not maximized: 33% of (max-with 900px - 180px search-filters - 18px border and padding) */
-  }
-}
-
-.search-result-dataset p,
-.search-result-dataset h2 {
-  color: #1e1e1e;
-  margin: 8px;
-}
-
-/* Show the title only when maximised. */
-
-#search-title {
-  display: none;
-}
-
-.max #search-title {
-  display: block;
-}
-
-/* Show the maximize link only when there are enough results. */
-
-.max #search-more {
-  display: none;
-}
-
-.max .hidden {
-  display: flex;
-}
-
-/* Hide the AI intro when maximised. */
-
-.max #ai-ui, .max button {
-  display: none;
-}
-
-/* Show the intro paragraphs as clickable paragraphs. */
-
-#search-more:hover {
-  cursor: pointer;
-  background-color: rgb(69 142 225 / 5%);
-}
-
-/* animate the bot */
-
-.bob {
-  animation: 1s bob alternate infinite;
-}
-
-@keyframes bob {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 1ch;
-  }
-}
-
-/* AI history and textarea */
-
-#ai-ui {
-  width: calc(100% - 16px);
-  margin: 16px 8px 8px 8px;
-  padding: 4px 8px;
-  box-sizing: border-box;
-  font: inherit;
-}
-
-.search-result-dataset button {
-  margin-left: 8px;
-}
-
-.chat {
-  color: #000;
-  clear: both;
-  padding: 5px 10px;
-  border-radius: 5px;
-  max-width: 85%;
-  word-wrap: break-word;
-  position: relative;
-}
-
-.question {
-  background-color: #ecf3f7;
-  float: right;
-}
-
-.answer {
-  background-color: #f5f5f5;
-  margin-left: 8px;
-  float: left;
-}
-
-.chat::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-}
-
-.question::after {
-  border: 4px solid #ecf3f7;
-  right: 0px;
-}
-
-.answer::after {
-  border: 4px solid #f5f5f5;
-  left: 0px;
-}
-
-#search-filters {
-  border: 1px solid #d9d9d9;
-  box-shadow: 0 1px 0 0 rgb(0 0 0 / 20%), 0 2px 3px 0 rgb(0 0 0 / 10%);
-  background: #fff;
-  border-radius: 4px;
-  width: 10rem;
-  flex: 0 0 auto;
-  overflow: auto;
-  padding: 0 8px;
-  max-height: calc(100vh - 5.25rem);
-}
-
-@media screen and (max-width: 768.5px) {
-  #search-filters {
-    display: none !important;
-  }
-}
-
 .search-result-dataset {
   position: relative;
   border: 1px solid #d9d9d9;
-  box-shadow: 0 1px 0 0 rgb(0 0 0 / 20%), 0 2px 3px 0 rgb(0 0 0 / 10%);
   background: #fff;
   border-radius: 4px;
   overflow: auto;
@@ -178,13 +39,6 @@
 .search-result-item {
   display: flex;
   margin-top: 0.5rem;
-  min-width: 700px;
-}
-
-@media screen and (max-width: 1024px) {
-  .search-result-item {
-    min-width: calc(100vw - 13.75rem); /* filters are 10 rem */
-  }
 }
 
 .search-result-component-header {
@@ -248,34 +102,32 @@
 
 #search-input {
   padding: 0.25em;
-  border: none;
 }
 
 #search-input:focus {
   outline: none;
 }
 
-/* Override the default to make it wider */
-@media screen and (min-width: 769px) {
-  #search-input {
-    width: 300px;
-  }
-}
-
 #search-field {
   display: flex;
 }
 
-.hidden {
-  display: none;
+#search-field .filter {
+  background: #fff linear-gradient(180deg, #e1e1e1 0, #e1e1e1) no-repeat 0 / 1px 50%;
+  border: 1px solid #e1e1e1;
+  border-left: none;
+  border-radius: 0 0.1em 0.1em 0;
+  color: #5d5d5d;
+  cursor: pointer;
+  font-size: 0.875em;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-#search-filters p {
-  display: block;
-  color: #000;
-  font-size: 0.7rem;
-}
-
-#search-filters a {
-  display: inline;
+#search-field.has-filter > input {
+  border-right: none;
+  border-radius: 0.1em 0 0 0.1em;
 }
