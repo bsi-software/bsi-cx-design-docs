@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CX Design Documentation :: BSI CX Design Usage Documentation</title>
+    <title>Untitled :: BSI CX Design Usage Documentation</title>
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="icon" type="image/svg+xml" href="../../_/pink-logo.svg">
@@ -39,7 +39,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="cx-design" data-version="24.2">
+<div class="nav-container" data-component="cx-design" data-version="25.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -49,7 +49,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -61,7 +61,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="content-editor.html">Content Editor</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="cx-design-build.html">CX Design Build</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -78,7 +78,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">CX Design Documentation</span>
-    <span class="version">24.2</span>
+    <span class="version">25.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
@@ -93,11 +93,11 @@
         <li class="version">
           <a href="../26.1/index.html">26.1</a>
         </li>
-        <li class="version">
-          <a href="../25.2/index.html">25.2</a>
-        </li>
         <li class="version is-current">
-          <a href="index.html">24.2</a>
+          <a href="index.html">25.2</a>
+        </li>
+        <li class="version">
+          <a href="../24.2/index.html">24.2</a>
         </li>
       </ul>
     </li>
@@ -113,17 +113,17 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">CX Design Documentation</a></li>
-    <li><a href="index.html">Overview</a></li>
+    <li><a href="cx-design-build.html">CX Design Build</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">24.2</button>
+  <button class="version-menu-toggle" title="Show other versions of page">25.2</button>
   <div class="version-menu">
-    <a class="version" href="../Overview/index.html">Overview</a>
-    <a class="version" href="../26.2/index.html">26.2</a>
-    <a class="version" href="../26.1/index.html">26.1</a>
-    <a class="version" href="../25.2/index.html">25.2</a>
-    <a class="version is-current" href="index.html">24.2</a>
+    <a class="version is-missing" href="../Overview/index.html">Overview</a>
+    <a class="version is-missing" href="../26.2/index.html">26.2</a>
+    <a class="version is-missing" href="../26.1/index.html">26.1</a>
+    <a class="version is-current" href="cx-design-build.html">25.2</a>
+    <a class="version" href="../24.2/cx-design-build.html">24.2</a>
   </div>
 </div>
 </div>
@@ -132,9 +132,61 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">CX Design Documentation</h1>
+<div class="sect1">
+<h2 id="designbuild"><a class="anchor local" href="#designbuild"></a>CX Design Build</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+As of BSI CX 22.0, the <a href="https://github.com/bsi-software/bsi-cx-design-build">design build</a> has been introduced and supersedes the previous CX design creator. Please refer to version 16.3 of the <a href="https://bsi-software.github.io/bsi-cx-docs/">CX design documentation</a> for more information about the CX design creator.
+</td>
+</tr>
+</tbody></table>
+</div>
 <div class="paragraph">
-<p>Wrong CX-version? <a href="https://bsi-software.github.io/bsi-cx-design-docs/">Click here</a> to get the documentation of all CX versions.</p>
+<p>The <a href="https://github.com/bsi-software/bsi-cx-design-build">design build</a> was developed to facilitate the creation of templates. The NPM build compiles ZIP files that are uploaded to BSI CX using a webpack build.</p>
+</div>
+<div class="paragraph">
+<p>The CX design build has the following functionality and tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Parsing Twig templates for HTML</p>
+</li>
+<li>
+<p>Formatting the generated HTML "nicely" and validating it</p>
+</li>
+<li>
+<p>Parsing SCSS/SASS to CSS</p>
+</li>
+<li>
+<p>Minifying and autoprefixing CSS</p>
+</li>
+<li>
+<p>Merging and minifying JavaScript</p>
+</li>
+<li>
+<p>Creating the ZIP file for the upload to BSI CX</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A detailed description of the application and the configuration options of the design build are documented in the <a href="https://github.com/bsi-software/bsi-cx-design-build/wiki">design build wiki at GitHub</a>.</p>
+</div>
+<div class="paragraph">
+<p>Please note: When creating designs with the CX design build, the generated artifacts (i.e., HTML, CSS, and JavaScript files) should not be directly edited. Instead, any modifications should be made in the source code itself.</p>
+</div>
+<div class="paragraph">
+<p>Of course, you can also use a separate tool stack to develop a design.
+We do not recommend the development of a design directly in HTML, CSS, and JavaScript.
+This may work with small templates, but it quickly becomes confusing and error prone.</p>
+</div>
+</div>
 </div>
 </article>
   </div>

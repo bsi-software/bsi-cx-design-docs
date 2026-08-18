@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Help :: BSI CX Design Usage Documentation</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" type="image/svg+xml" href="../../_/pink-logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../_/apple-touch-icon.png">
+    <link rel="mask-icon" href="../../_/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="msapplication-config" href="../../_/browserconfig.xml">
+    <link rel="manifest" href="../../_/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="article cx-design">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">BSI CX Design Usage Documentation</a>
+      <div class="navbar-item search hide-for-print" role="search">
+        <div id="search-field" class="field">
+          <input id="search-input" type="search" placeholder="Search" >
+        </div>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item navbar-item-logo">
+          <span class="logo">
+              <a href="https://www.bsi-software.com/"><img src="../Overview/index.html/../../../_/img/bsi-logo-inverted.svg" alt="BSI"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="cx-design" data-version="26.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">CX Design Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design-json.html">design.json</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bsi-data-attributes.html">Data BSI Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-elements.html">Content Elements and Parts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-editor.html">Content Editor</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">CX Design Documentation</span>
+    <span class="version">26.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../Overview/index.html">CX Design Documentation</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Overview/index.html">Overview</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">26.2</a>
+        </li>
+        <li class="version">
+          <a href="../26.1/index.html">26.1</a>
+        </li>
+        <li class="version">
+          <a href="../25.2/index.html">25.2</a>
+        </li>
+        <li class="version">
+          <a href="../24.2/index.html">24.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../Overview/index.html" class="home-link" aria-label="Home"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">CX Design Documentation</a></li>
+    <li><a href="help.html">Help</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">26.2</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../Overview/index.html">Overview</a>
+    <a class="version is-current" href="help.html">26.2</a>
+    <a class="version" href="../26.1/help.html">26.1</a>
+    <a class="version" href="../25.2/help.html">25.2</a>
+    <a class="version" href="../24.2/help.html">24.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Help</h1>
+<div class="sect1">
+<h2 id="_good_practices"><a class="anchor local" href="#_good_practices"></a>Good practices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following things have been established as good practice in some projects. However, this approach is by no means mandatory and may vary depending on the project and individual preferences.</p>
+</div>
+<div class="sect2">
+<h3 id="_deleting_or_deprecating_content_elements"><a class="anchor local" href="#_deleting_or_deprecating_content_elements"></a>Deleting or deprecating content elements</h3>
+<div class="paragraph">
+<p>It is possible to archive content elements in a design without losing these elements in an existing content after updating the design (see <a href="#archiving-elements" class="local">[archiving-elements]</a>). Instead of deleting content elements, we strongly recommend archiving content elements.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_refactoring_content_elements"><a class="anchor local" href="#_refactoring_content_elements"></a>Refactoring content elements</h3>
+<div class="paragraph">
+<p>While refactoring a content element, keep in mind that your changes to a content element should never break existing content. We strongly advice to test your refactored content element to content that was created under the old design version to make sure that you do not introduce breaking changes. Critical points are renamings, changing the order for element parts and big changes to the DOM structure. In spite of that, we do encourage you to refactor where necessary, remind you to test carefully.
+If a refactoring is not possible due to migration issues, adding a new content element and deprecating the preexisting one (see: <a href="#_deleting_or_deprecating_content_elements" class="local">Deleting or deprecating content elements</a>) is a feasible option.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creating_accessible_designs"><a class="anchor local" href="#_creating_accessible_designs"></a>Creating accessible designs</h3>
+<div class="paragraph">
+<p>To ensure accessibility in BSI CX contents, several things should be taken into account when developing a design. They help to ensure that screen readers can read out the content in the best possible way and that people with impaired vision will not be disadvantaged.</p>
+</div>
+<div class="sect3">
+<h4 id="_layout"><a class="anchor local" href="#_layout"></a>Layout</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>All functionalities (form input fields and control elements) should be accessible and operable using the keyboard (tab key). It must also be possible to exit all elements using the keyboard so that the user can navigate through all content.</p>
+</li>
+<li>
+<p>Every website has a correct language declaration. If the main language of the page is English, all texts should be in English. If the intention is to insert text in another language, then this should be marked up accordingly with the lang attribute in the correct language.</p>
+</li>
+<li>
+<p>Enlargement is possible in the browser, both with "Zoom" and by setting a user-defined font size</p>
+</li>
+<li>
+<p>To ensure that screen readers interpret and parse all page content correctly, HTML elements of a website must be implemented in accordance with their W3C specifications. The <a href="https://validator.w3.org/">W3C’s Markup Validation Services</a> can be used to check whether the source code of a website complies with the W3C specifications.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_styling"><a class="anchor local" href="#_styling"></a>Styling</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The contrast ratio of the font color to the background color is at least 4.5:1</p>
+</li>
+<li>
+<p>The contrast ratio of the font color of large font and the background color is at least 3:1</p>
+</li>
+<li>
+<p>If color differentiation alone is used, e.g. for links in a text, the links have a contrast ratio to the surrounding continuous text of at least 3:1</p>
+</li>
+<li>
+<p>Each element must have a visible focus state that has a contrast ratio of 3:1 to the background or non-focused state</p>
+</li>
+<li>
+<p>No spaces to create spacing, but CSS instead</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_elements"><a class="anchor local" href="#_elements"></a>Elements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>For information-bearing images, the alternative text must describe the visual information</p>
+</li>
+<li>
+<p>Headings are marked with the heading element (h1, h2, …​ , h6)</p>
+</li>
+<li>
+<p>The text size (font size) in web templates is defined in CSS in % or em</p>
+</li>
+<li>
+<p>Enumerations are formatted as lists (ul, ol, dl)</p>
+</li>
+<li>
+<p>Special text is formatted correctly, e.g. quotes as &lt;blockquote&gt; and &lt;cite&gt;</p>
+</li>
+<li>
+<p>Video content should have synchronous subtitles</p>
+</li>
+<li>
+<p>Data tables are formatted with the necessary markup, e.g. column, row and table headings are labeled and headings and summaries are present</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_forms"><a class="anchor local" href="#_forms"></a>Forms</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Labels are present and meaningful. Labels and associated form input fields are logically linked (implementation with <em>for</em> attribute for label elements). The label should be present prior to the associated input field (exception: checkboxes, radio buttons).</p>
+</li>
+<li>
+<p>Form fields may have an additional information text to describe what input is expected. If, for example, a certain format is expected, this should be described (e.g. <em>"Date format: DD.MM.YYYY"</em>). This text should be placed in front of the input field.</p>
+</li>
+<li>
+<p>Mandatory fields should be marked (e.g. with <em>*</em>). The mandatory field star must not be integrated via CSS, it should be placed directly in the label. The required attribute should be added to the input element.</p>
+</li>
+<li>
+<p>A mandatory field explanation should be provided (e.g. "Please fill in all fields marked with <em>*</em>"). The information must appear before the first mandatory field.</p>
+</li>
+<li>
+<p>Error messages should appear directly below the relevant input field. They should have the attributes <em>aria-live="assertive"</em> (or <em>aria-live="polite"</em>) and <em>role="alert"</em> so that they are read aloud by the screen reader as soon as they appear.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting"><a class="anchor local" href="#_troubleshooting"></a>Troubleshooting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this chapter, we are collecting some common issues design developers may face in their development process.</p>
+</div>
+<div class="sect2">
+<h3 id="_design_upload"><a class="anchor local" href="#_design_upload"></a>Design Upload</h3>
+<div class="paragraph">
+<p>While uploading a design, BSI CX will parse the content of the ZIP file to ensure that the containing design is valid. If the parser detects inconsistencies, an error message is displayed. The following trouble shooting sections will help to correct the error.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+It is helpful to to view the details of the error message by clicking on <strong>Details</strong>, if available.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect3">
+<h4 id="_validation_error_file_is_missing"><a class="anchor local" href="#_validation_error_file_is_missing"></a>Validation error: File is missing</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/invalid_design_error_missing_mandatory_files.png" alt="error message: file is missing">
+</div>
+<div class="title">Figure 1. error message: file is missing</div>
+</div>
+<div class="paragraph">
+<p>Your upload is missing a mandatory file. Please refer to <a href="#File format" class="local">[File format]</a> where the mandatory files for your design type is described in detail.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_validation_error_invalid_content_element_in_data_bsi_dropzone_allowed_elements"><a class="anchor local" href="#_validation_error_invalid_content_element_in_data_bsi_dropzone_allowed_elements"></a>Validation error: Invalid content element in 'data-bsi-dropzone-allowed-elements'</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/invalid_design_error_invalid_element_in_dropzone.png" alt="error message: invalid content element in 'data-bsi-dropzone-allowed-elements'">
+</div>
+<div class="title">Figure 2. error message: invalid content element in 'data-bsi-dropzone-allowed-elements'</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Error message</p>
+</li>
+<li>
+<p>Affected ZIP file</p>
+</li>
+<li>
+<p>Affected file (within the ZIP file)</p>
+</li>
+<li>
+<p>Name of the <em>data-bsi-dropzone</em> in which the error causing content element is placed</p>
+</li>
+<li>
+<p>The name of the content element. In this case, the content element name is missing</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In one of your <code>data-bsi-dropzone-allowed-elements=''</code> definitions, there is an element listed which does not exist in the <code>content-elements.html</code> file. Common cases where this happens:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A content element has been deleted but it is still referred by a dropzone</p>
+</li>
+<li>
+<p>A content element has been renamed and a dropzone is still referring to it under its previous name</p>
+</li>
+<li>
+<p>A new content element has just been implemented, but there is a mismatch in naming. Check again the name of your <em>data-bsi-element</em> and make sure it matches the name in the dropzone.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">example of a badly referenced element in a dropzone</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- Design_de-CH.zip/design.html --&gt;
+&lt;div data-bsi-dropzone="content"
+        data-bsi-dropzone-allowed-elements="basic-cta hello-world"&gt;
+        &lt;!-- hello-world should be hello-text, see below --&gt;
+&lt;/div&gt;
+
+&lt;!-- Design_de-CH.zip/content-elements.html --&gt;
+&lt;div data-bsi-group="basic"&gt;
+    &lt;!-- in design.html, the element is incorrectly referenced under the name hello-world --&gt;
+    &lt;div data-bsi-element="hello-text" data-bsi-element-part="formatted-text"&gt;
+        &lt;p&gt;Lorem ipsum&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;a data-bsi-element="basic-cta" href="#" data-bsi-element-part="link" class="element basic-cta"&gt;Lorem ipsum&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_validation_error_unknown_content_element_part"><a class="anchor local" href="#_validation_error_unknown_content_element_part"></a>Validation error: Unknown content element part</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/invalid_design_error_unknown_content_element_part.png" alt="error message: unknown content element part">
+</div>
+<div class="title">Figure 3. error message: unknown content element part</div>
+</div>
+<div class="paragraph">
+<p>The specified <code>data-bsi-element-part</code> is not supported by BSI CX. For a list of supported element parts, visit the <a href="#Parts" class="local">[Parts]</a> documentation chapter.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the example above, a <em>text</em> element part is specified. According to the documentation, it must either be <em>plain-text</em> or <em>formatted-text</em>. Thus, it is unknown to BSI CX.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_validation_error_dropzone_contains_sample_content_element_that_doesnt_match_the_structure_of_the_reference_content_element"><a class="anchor local" href="#_validation_error_dropzone_contains_sample_content_element_that_doesnt_match_the_structure_of_the_reference_content_element"></a>Validation error: Dropzone contains sample content element that doesn’t match the structure of the reference content element</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/invalid_design_error_sample_content_not_matching_content_element_spec.png" alt="error message: Dropzone contains sample content element that doesn’t match the structure of the reference content element">
+</div>
+<div class="title">Figure 4. error message: Dropzone contains sample content element that doesn’t match the structure of the reference content element</div>
+</div>
+<div class="paragraph">
+<p>A discrepancy was discovered when using a content element as sample content. The example must have the same HTML structure as the specified content element.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A comparison of the two elements can be displayed by clicking on <strong>Details</strong>.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">example of a sample content that does not match the specified content element</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- Content Element: Specification of the element (content-elements.html) --&gt;
+&lt;div class="hello-world" data-bsi-element="basic-hello-world"&gt;
+    &lt;h1 data-bsi-element-part="plain-text"&gt;Placeholder&lt;/h1&gt;
+    &lt;img data-bsi-element-part="image" src="placeholder.png" alt="" /&gt;
+&lt;/div&gt;
+&lt;!-- Content: sample content (design.html or content-elements.html) --&gt;
+&lt;div class="hello-world" data-bsi-element="basic-hello-world"&gt;
+    &lt;h1 data-bsi-element-part="plain-text"&gt;Hello World, how are you?&lt;/h1&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;p&gt;just another text&lt;/p&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+    &lt;img data-bsi-element-part="image" src="hello-my-dear-world.png" alt="" /&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>OK: deviating text within an editable area (here: plain-text element part)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>OK: deviating attribute, which can be edited from BSI CX for this type anyway</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>NOT OK: adding, manipulating or removing DOM nodes is not allowed</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_validation_error_dropzone_contains_sample_content_that_are_not_content_elements"><a class="anchor local" href="#_validation_error_dropzone_contains_sample_content_that_are_not_content_elements"></a>Validation error: Dropzone contains sample content that are not content elements</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/invalid_design_error_sample_content_that_are_not_content_elements.png" alt="error message: Dropzone contains sample content that are not content elements">
+</div>
+<div class="title">Figure 5. error message: Dropzone contains sample content that are not content elements</div>
+</div>
+<div class="paragraph">
+<p>A dropzone can contain 0…​n content elements. Only content elements are allowed as direct child nodes of dropzones. Therefore, HTML that is not part of a content element must not be placed in a dropzone.</p>
+</div>
+<div class="listingblock">
+<div class="title">example of a detached paragraph that must not be placed in a dropzone</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-dropzone="content" data-bsi-dropzone-allowed-elements="title-h1 title-h2 title-h3 basic-text basic-image basic-cta"&gt;
+    &lt;h1 data-bsi-element="title-h1" data-bsi-element-part="plain-text" class="element title-h1"&gt;Lorem ipsum&lt;/h1&gt;
+    &lt;p&gt;The paragraph surrounding me is not part of a content element and therefore must not be placed in the dropzone 'content'.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_validation_error_part_uses_tag_x_but_requires_one_of_the_following_yz"><a class="anchor local" href="#_validation_error_part_uses_tag_x_but_requires_one_of_the_following_yz"></a>Validation error: Part uses tag X but requires one of the following: Y,Z</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/invalid_design_error_wrong_HTML_tag.png" alt="error message: Part uses tag div but requires one of the following: a" width="img">
+</div>
+<div class="title">Figure 6. error message: Part uses tag div but requires one of the following: a,img</div>
+</div>
+<div class="paragraph">
+<p>Make sure to user proper HTML tags for your element parts. Consult the content element <a href="#Parts" class="local">[Parts]</a> documentation for the validation error causing element.</p>
+</div>
+<div class="paragraph">
+<p><em>In the example above, this would be the <a href="#Image" class="local">[Image]</a> content element <a href="#Parts" class="local">[Parts]</a> documentation.</em></p>
+</div>
+<div class="listingblock">
+<div class="title">example of a incorrect HTML tag for a certain element part and how to fix it.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- Invalid: uses &lt;div&gt; which is not an image --&gt;
+&lt;div data-bsi-element-part="image" src="img.png" alt=""&gt;&lt;/div&gt;
+&lt;!-- Correct way: use an &lt;img&gt; tag --&gt;
+&lt;img data-bsi-element-part="image" src="img.png" alt="" /&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_validation_error_the_x_tag_must_contain_exactly_one_y_tag"><a class="anchor local" href="#_validation_error_the_x_tag_must_contain_exactly_one_y_tag"></a>Validation error: The X tag must contain exactly one Y tag</h4>
+<div class="paragraph">
+<p>Make sure to user proper HTML tags for your element parts. Consult the content element <a href="#Parts" class="local">[Parts]</a> documentation for the validation error causing element.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_design_update"><a class="anchor local" href="#_design_update"></a>Design Update</h3>
+<div class="paragraph">
+<p>To update existing content onto the most recent version of a design, the content must be explicitly updated by clicking the <em><strong>Update Design</strong></em> button in the content editor.
+Success or failure of such a design update is indicated by a message box.</p>
+</div>
+<div class="paragraph">
+<p>After an update, we advise to visually cross-check the content to make sure that a change in the design has not broken your content. In case if you are seeing content that does no longer render properly, your recent design version has introduced a flaw. in that case, you can revert the design update by clicking on the cancel button in the content editor.</p>
+</div>
+<div class="paragraph">
+<p>Be reminded that once an updated content is saved, there is no way to go back to the older design version, unless you explicitly create a new version by selecting the respective checkbox next to the save button before saving the content.</p>
+</div>
+<div class="sect3">
+<h4 id="_design_validation"><a class="anchor local" href="#_design_validation"></a>Design Validation</h4>
+<div class="paragraph">
+<p>After hitting the <em>design update</em> button or after a modification of your content, you may see a validation error indicated in the top-right corner.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/design-update-validation-error.png" alt="validation error indicator on design update">
+</div>
+</div>
+<div class="paragraph">
+<div class="title">the red exclamation mark indicates a validation error on design update</div>
+<p>In such a case, there is an issue in the design used by your content. The most typical error messages related to design issues are described in the following chapter. You may also see some that are already described in the <a href="#_design_upload" class="local">Design Upload</a> section.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_content_does_not_match_the_structure_of_the_referenced_content_element"><a class="anchor local" href="#_content_does_not_match_the_structure_of_the_referenced_content_element"></a>Content does not match the structure of the referenced content element</h4>
+<div class="paragraph">
+<p>The structure of one of your content elements that is being used right now in your content does no longer match it’s specification.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+It is helpful to to view the details of the error message by clicking on <strong>Details</strong>, if available.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/design-update-validation-error-details.png" alt="viewing validation error details">
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="title">viewing validation error details</div>
+In versions prior to BSI CX 1.2.48, the error message may be cut off in the message box.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Use kbd:[Ctrl+C] and paste the error message to any text file to view the full details.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>The details of such an error message always have the same structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Content Element:
+&lt;div&gt;....&lt;/div&gt;
+
+Content:
+&lt;div&gt;.....&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the difference is difficult to find, we recommend using a diff tool to compare the concrete content with the content element specification.</p>
+</div>
+<div class="paragraph">
+<p>The root cause of a difference between a concrete content and the content element specification may be one of the following:</p>
+</div>
+<div class="sect4">
+<h5 id="_javascript"><a class="anchor local" href="#_javascript"></a>JavaScript</h5>
+<div class="paragraph">
+<p>You have a JavaScript running that is manipulating your content element. To prevent your content from being modified through a script, make sure that you update your <code>&lt;script&gt;</code> tags in your <em>design.html</em> file so that the scripts will only be loaded if your content is <strong>not</strong> being edited right now in the content editor.
+Removing a <code>script</code> tag from the DOM if the content is being edited can be achieved by adding <code>data-bsi-remove-if='draft'</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">removing a sript in draft (edit) mode</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;script data-bsi-remove-if="draft" src="your-javascript that manipulates-the-DOM.js" &gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_duplicate_attributes"><a class="anchor local" href="#_duplicate_attributes"></a>Duplicate attributes</h5>
+<div class="paragraph">
+<p>If you compare the specification of the content element to the actual content and the difference is somehow related to a CSS value that is being replaced by the term <em><strong>placeholder</strong></em>, then you might have defined the error causing HTML attribute twice.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/troubleshooting_placeholder_duplicate_attribute.png" alt="splitting the error message to compare _content_ and _content element_">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">invalid HTML will lead to issues</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- Invalid HTML: the attribute 'style' is defined twice --&gt;
+&lt;img style="text-decoration: none;" src="img/example.png" style="width:100%; max-width: 100%;"/&gt;
+
+&lt;!-- By merging the 'style' attribute, we can fix the issue above --&gt;
+&lt;img src="img/example.png" style="text-decoration: none; width:100%; max-width: 100%;"/&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_usage_of_invalid_html"><a class="anchor local" href="#_usage_of_invalid_html"></a>Usage of invalid HTML</h5>
+<div class="paragraph">
+<p>Some browsers detect and try to <em>fix</em> invalid HTML. Therefore, the DOM structure of the HTML is modified by the browsers, whereas BSI CX still expects the specified structure.</p>
+</div>
+<div class="listingblock">
+<div class="title">invalid HTML will lead to issues</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- Invalid HTML, as defined in content-elements.html --&gt;
+&lt;table data-bsi-dropzone="table"&gt;
+    &lt;div data-bsi-element="text"&gt;...&lt;/div&gt;
+&lt;/table&gt;
+
+&lt;!-- As soon as the HTML is dropped in BSI CX, the browser will 'fix' the HTML, leading to a different HTML for the concrete content --&gt;
+&lt;table data-bsi-dropzone="table"&gt;&lt;/table&gt;
+&lt;div data-bsi-element="text"&gt;...&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_inline_svg_older_bsi_cx_versions"><a class="anchor local" href="#_inline_svg_older_bsi_cx_versions"></a>Inline SVG (older BSI CX versions)</h5>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This section applies to installations prior to BSI CX 1.2.48.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>Inline SVG is not supported in older BSI CX versions. As a workaround, you may save the SVG to a file instead and  include it with an <code>&lt;img&gt;</code> tag. If it is a requirement to render the SVG inline, some projects have successfully used the Open-Source library <a href="https://github.com/iconfu/svg-inject">svg-inject</a> as a fallback.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dropzone_issues"><a class="anchor local" href="#_dropzone_issues"></a>Dropzone Issues</h3>
+<div class="paragraph">
+<p>If you face issues related to dropzones (a dropzone does not allow to drop your element, the element is dropped in a different place, …​), you may find a solution in this section.</p>
+</div>
+<div class="sect3">
+<h4 id="_element_is_not_dropable_or_being_dropped_in_another_place"><a class="anchor local" href="#_element_is_not_dropable_or_being_dropped_in_another_place"></a>Element is not dropable or being dropped in another place</h4>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This section applies to installations prior to BSI CX 1.2.46.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/unique-dropzone-name-violated.png" alt="element is being dropped outside of the dropzone (or nowhere)">
+</div>
+<div class="title">Figure 7. element is being dropped outside of the dropzone (or nowhere)</div>
+</div>
+<div class="paragraph">
+<p>This may happen if a dropzone name is duplicated.
+Dropzones must have unique identifiers in older versions of BSI CX.
+Make sure that a unique name is specified for each usage of <code>data-bsi-dropzone</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">data-bsi-dropzone uniqueness violated</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- design.html --&gt;
+&lt;div class="main-dropzone" data-bsi-dropzone="content" <i class="conum" data-value="1"></i><b>(1)</b>
+     data-bsi-dropzone-allowed-elements="....."&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;
+
+&lt;!-- content-elements.html --&gt;
+&lt;div class="image-area" data-bsi-dropzone="content" <i class="conum" data-value="2"></i><b>(2)</b>
+     data-bsi-dropzone-allowed-elements="download-item"&gt;&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>A dropzone named 'content' is being defined properly</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Violation: another dropzone with the same name is defined again. Solution: change <code>data-bsi-dropzone</code> to another value, e.g. data-bsi-dropzone="image-area-content"</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_content_editor_limitations"><a class="anchor local" href="#_content_editor_limitations"></a>Content Editor Limitations</h3>
+<div class="sect3">
+<h4 id="_using_css_viewport_units"><a class="anchor local" href="#_using_css_viewport_units"></a>Using CSS viewport units</h4>
+<div class="paragraph">
+<p>If you want to use CSS viewport units, e.g. viewport-height <code>vh</code>, please note the following:</p>
+</div>
+<div class="paragraph">
+<p>The content displayed in the content editor is embedded in an iframe. When elements defined by a CSS viewport unit are placed inside an iframe, the size of the iframe is used as a reference, not the size of the screen as desired.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, the CSS classes <code>bsi-ce-edit-mode</code> and <code>bsi-ce-preview-mode</code> (see <a href="#content-editor-specific-css" class="local">[content-editor-specific-css]</a>) should be used to define a fixed height/width as alternative to the viewport height/width for proper display in the content editor and preview mode. It is also important to note that this fixed height/width should be set as minimum size of the element with the CSS viewport unit. Otherwise BSI CX will calculate the size of the content editor incorrectly.</p>
+</div>
+<div class="paragraph">
+<p>See the following example:</p>
+</div>
+<div class="listingblock">
+<div class="title">CSS of an element using viewport unit</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">.header-image {
+    height: calc(100vh - 32px);
+    min-height: 800px !important;
+}
+.bsi-ce-edit-mode .header-image,
+.bsi-ce-preview-mode .header-image {
+    height: 800px !important;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © BSI Business Systems Integration AG.</p>
+</footer><script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/section-numbers.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/call-outs.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

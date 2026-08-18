@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content Editor :: BSI CX Design Usage Documentation</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" type="image/svg+xml" href="../../_/pink-logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../_/apple-touch-icon.png">
+    <link rel="mask-icon" href="../../_/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="msapplication-config" href="../../_/browserconfig.xml">
+    <link rel="manifest" href="../../_/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="article cx-design">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">BSI CX Design Usage Documentation</a>
+      <div class="navbar-item search hide-for-print" role="search">
+        <div id="search-field" class="field">
+          <input id="search-input" type="search" placeholder="Search" >
+        </div>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item navbar-item-logo">
+          <span class="logo">
+              <a href="https://www.bsi-software.com/"><img src="../Overview/index.html/../../../_/img/bsi-logo-inverted.svg" alt="BSI"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="cx-design" data-version="26.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">CX Design Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design-json.html">design.json</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bsi-data-attributes.html">Data BSI Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-elements.html">Content Elements and Parts</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="content-editor.html">Content Editor</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">CX Design Documentation</span>
+    <span class="version">26.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../Overview/index.html">CX Design Documentation</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Overview/index.html">Overview</a>
+        </li>
+        <li class="version">
+          <a href="../26.2/index.html">26.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">26.1</a>
+        </li>
+        <li class="version">
+          <a href="../25.2/index.html">25.2</a>
+        </li>
+        <li class="version">
+          <a href="../24.2/index.html">24.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../Overview/index.html" class="home-link" aria-label="Home"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">CX Design Documentation</a></li>
+    <li><a href="content-editor.html">Content Editor</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">26.1</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../Overview/index.html">Overview</a>
+    <a class="version" href="../26.2/content-editor.html">26.2</a>
+    <a class="version is-current" href="content-editor.html">26.1</a>
+    <a class="version" href="../25.2/content-editor.html">25.2</a>
+    <a class="version" href="../24.2/content-editor.html">24.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Content Editor</h1>
+<div class="sect1">
+<h2 id="content-editor-specific-css"><a class="anchor local" href="#content-editor-specific-css"></a>Content editor specific CSS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sometimes it is useful to apply special CSS rules to the content when the page is in edit or preview mode. There are two special CSS classes set on the document’s <code>&lt;html&gt;</code> tag to address such use cases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>bsi-ce-edit-mode</strong> is set when the document is shown in the content editor.</p>
+</li>
+<li>
+<p><strong>bsi-ce-preview-mode</strong> is set when the document is shown in preview mode inside the content editor.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The preview mode outside the content editor or any content that is delivered by a story will not have any of the above listed classes.</p>
+</div>
+<div class="listingblock">
+<div class="title">editor specific CSS example: HTML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;html&gt;&lt;head&gt;&lt;!-- head omitted --&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class="hide show-if-edit"&gt;this is edit mode&lt;/h1&gt;
+    &lt;h1 class="hide show-if-preview"&gt;this is preview mode&lt;/h1&gt;
+    &lt;!-- rest of body omitted --&gt;
+&lt;/body&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">editor specific CSS example: CSS</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">.hide { display: none; }
+.bsi-ce-edit-mode .show-if-edit { display: block; color:green; }
+.bsi-ce-preview-mode .show-if-preview { display: block; color:darkorange; }</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. editor specific CSS example: resulting representation in the content editor</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edit mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Preview Mode</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/editor-spedific-css_edit-mode.png" alt="edit mode">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/editor-spedific-css_preview-mode.png" alt="preview mode">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_predefined_story_outlets_bracket_links"><a class="anchor local" href="#_predefined_story_outlets_bracket_links"></a>Predefined Story outlets (Bracket Links)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One way to define a link out of a design is to use a <code>data-bsi-element-part="link"</code> annotation on a link (<code>&lt;a&gt;</code>) element.
+Doing so will add a link editor to enter a URL and a link text to the content editor.</p>
+</div>
+<div class="listingblock">
+<div class="title">Adding an editable link to a content element.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;a data-bsi-element-part="link" href="https://www.bsi-software.com/"&gt;BSI Website&lt;/a&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/data-bsi-element-part-link.png" alt="editing a link element part">
+</div>
+<div class="title">Figure 1. visualization of an editable link</div>
+</div>
+<div class="paragraph">
+<p>Another way to define a link directly out of a design is by using the BSI CX <em>bracket link syntax</em> for links.
+This mechanism in built into the content editor itself to create a link anywhere in a text.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example on adding a link anywhere in the text.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;span data-bsi-element-part="plain-text" &gt;If you do not wish to receive further promotions, you can [unsubscribe] now.&lt;/span&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/bracket-links-demo.png" alt="usage of bracket links in BSI">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Definition of links using the BSI CX bracket syntax.</p>
+</li>
+<li>
+<p>Each link is converted into a story outlet.
+Each outlet can then be linked to an individual action in the story.</p>
+</li>
+<li>
+<p>The content that is delivered to the user.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>While rendering the above content, BSI CX will convert the <code>[unsubscribe]</code> term to a link tag internally, create a unique hyperlink and will add a new outlet to the step to which the current content belongs.
+When using bracket links, the story designer will see the provided link as a story outlet by default.
+This allows the Story Designer to link the click action on the link with other steps (e.g. a subsequent landing page step).
+In the example above, the <em>Email Step</em> will already have an outlet named <em>unsubscribe</em>.
+The bracket technique itself is usable everywhere in the content editor and is not limited to the usage in a design.</p>
+</div>
+<div class="paragraph">
+<p>The convenience format of a bracket link for BSI CX is <code>[link text|ID]</code>.
+The full syntax is <code>[ID|text=link text|url=https://example.com|newWindow]</code>.</p>
+</div>
+<div class="paragraph">
+<p>You may use the following optional parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>url</code> can be used to explicitly specify an absolute URL.</p>
+</li>
+<li>
+<p><code>newWindow</code> will force to open the target in a new tab or window.</p>
+</li>
+<li>
+<p><code>follow</code> removes the <em>nofollow</em> value from the html <em>rel</em> attribute. Without <em>nofollow</em>, bots are allowed to crawl your page (not recommended for personalised links).</p>
+</li>
+<li>
+<p><code>login</code> creates a link having the query parameter ?login, which redirects to the login page in a website.</p>
+</li>
+<li>
+<p><code>logout</code> creates a link having the query parameter ?logout, which removes the authenticated user from a BSI CX HTTP session in a website.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If a bracket itself should be part of a link, it can be escaped with a backslash (e.g. <code>[\[click me\]|id]</code> will then be visualized as <em>[click me]</em>).</p>
+</div>
+<div class="paragraph">
+<p>You can also place a bracket link anywhere in the design.
+An example of doing so is to add it to an <code>href</code> of a link.</p>
+</div>
+<div class="listingblock">
+<div class="title">Adding a bracket link to a link will allow us to track the "Facebook" link in BSI CX.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;a href="[Facebook]"&gt;&lt;img src="img/facebook.png" /&gt;&lt;/a&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Be reminded that all BSI CX will replace everything that looks like a bracket link.
+It is your responsibility as a developer to use escaping where brackets have a different meaning.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Escaping is important in cases like this one.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!-- BSI CX will convert this to a bracket link --&gt;
+&lt;input pattern="[0-9]"&gt;
+
+&lt;!-- escaping is mandatory for the pattern mechanism to work as desired --&gt;
+&lt;input pattern="\[0-9]"&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bracket_links_in_iterators"><a class="anchor local" href="#_bracket_links_in_iterators"></a>Bracket links in iterators</h3>
+<div class="paragraph">
+<p>When you display data in a table, you will use the iterator feature of BSI CX.
+In this example we display a list of blog articles.</p>
+</div>
+<div class="paragraph">
+<p>In the content editor you use a table content-element.
+You activate the 'Dynamic table' checkbox in the editor form.
+Now you define the columns. Let’s assume we have 3 columns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>{blog.title}</p>
+</li>
+<li>
+<p>{blog.releaseDate}</p>
+</li>
+<li>
+<p>[blog.details] [blog.edit]</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The third column defines two iterator bracket links.
+The link ID must start with the entity prefix,
+which is followed by an arbitrary name that defines the function of the link.</p>
+</div>
+<div class="paragraph">
+<p>When you use this content in a media step in the storyboard,
+the step will provide a GUI, to pick an entity and the values for the placeholders 'title' and 'releaseDate'.
+For the two links the step will generate two outlets.
+A consequent step connected to these outlets can pick from the iterator property which is labeled with 'Chosen via link' and can access the properties of that distinct iterator item.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_styling_of_bracket_links"><a class="anchor local" href="#_styling_of_bracket_links"></a>Styling of bracket links</h3>
+<div class="paragraph">
+<p>When BSI CX converts a <code>[placeholder]</code> term internally into a link tag, it adds the CSS class <code>placeholder-link</code> to the <code>a</code> tag. This allows bracket links to be selected and styled separately from other link elements.</p>
+</div>
+<div class="listingblock">
+<div class="title">How to style a BSI CX bracket link using the CSS class <code>placeholder-link</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">a.placeholder-link {color: #fe9915;}
+.footer-div a.placeholder-link {color: #ffffff;}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It should be noted that the CSS class is not set until the live content is rendered. For this reason, you won’t find the styling, referring to the CSS class <code>placeholder-link</code>, in the content editor, but only - in the case of email content - in the sent email.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_anchor_links_inside_a_design"><a class="anchor local" href="#_using_anchor_links_inside_a_design"></a>Using anchor links inside a design</h3>
+<div class="paragraph">
+<p>First of all, it is possible to use anchor links in the form of <code>#top</code> inside a BSI CX design.
+Anchor links are allowed as targets of <a href="#sec-link-part" class="local">link parts</a>.
+However, it is not possible to use anchor links as <code>url</code> of a bracket link.
+This is due to the fact, that bracket links meant to be trackable by BSI CX and this requires a complete roundtrip to the server.</p>
+</div>
+<div class="listingblock">
+<div class="title">How to use anchor links in a design.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section id="news"&gt;
+    &lt;!-- some news --&gt;
+&lt;/section&gt;
+
+&lt;!-- some more html code --&gt;
+
+&lt;div data-bsi-element="cta"&gt;
+    &lt;a href="#news" data-bsi-element-part="link"&gt;Jump to news&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websites"><a class="anchor local" href="#websites"></a>Websites</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_terms"><a class="anchor local" href="#_terms"></a>Terms</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Website</strong>: The complete website. Contains several pages in different languages.</p>
+</li>
+<li>
+<p><strong>Page</strong>: A single page within a website. Pages appear in the navigation and have a content in different languages.</p>
+</li>
+<li>
+<p><strong>Include</strong>: A content snippet, which is saved locally once and can be referenced at any point within the website. We differentiate between built-in includes and custom includes. Built-in includes are content snippets that are included in the design.zip, custom includes are created by the user based on a content-element.</p>
+</li>
+<li>
+<p><strong>Website content type</strong>: Website content type items are pages from a website with a specific type, like a blog or a press release.
+Other than website pages, website content type items do not affect the structure of the website.
+Which means, a user can publish for instance a blog page, without changes to the story that uses the website.
+Additionally, a website content type has specific fields, like <em>author</em> or <em>tags</em>.
+With the "Website Content Type Query" step you can query, filter and sort website content type items dynamically and use the results as BSI CX iterator or as REST response in the frontend code of the website.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_concepts"><a class="anchor local" href="#_concepts"></a>Concepts</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>BSI CX-Placeholders can be used on every page of a website. Their scope generally involves a single page. For example the placeholder <code>"{Subject}"</code> has to be mapped once for each page that uses it. A placeholder within an include (e.g. header or footer) only has to be mapped once. An example for that case would be the display of <code>"{Username}"</code> within the header of a portal-website. Placeholders can <em>not</em> be used within page-titles or the navigation.</p>
+</li>
+<li>
+<p>Custom includes <em>can’t</em> be nested. Technically, that would be possible, but it would need many checks and visualizations inside the content editor to detect potential infinite recursions and give feedback to the user through reasonable error messages. For that reason we currently don’t support that feature.</p>
+</li>
+<li>
+<p>An include can only be used <em>once</em> within the same page.</p>
+</li>
+<li>
+<p>Multilingualism: All contents and their includes are always created in every active language for their website. E.g.: The website is configured to be German and Italian. On the creation of a new page, two pages will be created: one for Italian and one for German (including their dummy-contents). Within the UI there is no option to create a single page in one specific language only. If necessary, a BSI CX-condition may be used to hide a page for a specific language inside the navigation-tree.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_handlebars_templates"><a class="anchor local" href="#_handlebars_templates"></a>Handlebars, Templates</h3>
+<div class="paragraph">
+<p>The template engine <em>Handlebars</em> is available to the design developer at runtime. The templates are parsed server-sided. We’re using the <a href="https://github.com/jknack/handlebars.java">Java-Port by JKnack</a>. In the design, handlebars templates are important especially for display of the navigation.</p>
+</div>
+<div class="paragraph">
+<p>Handlebars templates can only be used for parts of a website that <em>can’t</em> be edited by the user. We set that rule, because templates are parsed server-sided. When the content-editor receives the HTML source, the templates have already been resolved. If the user would edit a content-element that contained handlebars syntax, we could only save the rendered content that the user edited. The original handlebars code would be lost.</p>
+</div>
+<div class="paragraph">
+<p>For that reason, handlebars should mostly be used for includes that <em>can’t</em> be edited. Examples for such includes are the master (<code>design.html</code>), the navigation or areas outside a dropzone.</p>
+</div>
+<div class="paragraph">
+<p>This mechanism can also be used consciously to set multilingual default texts, which are deposited inside the <code>website.json</code> file. An example for an include for the website header in handlebars code could look something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="master-header"&gt;
+  &lt;img src="img/nyan-cat.gif"&gt;
+  &lt;h1 data-bsi-element-part="plain-text"&gt;{{bsi.nls "website.title"}}&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On the initial rendering of the page inside the content editor, the text <code>"website.title"</code> is resolved. As the user saves the page, the initial handlebars code is substituted by the actual text.</p>
+</div>
+<div class="paragraph">
+<p>Handlebars syntax can also be used in the content-element source files; especially for the NLS-helper to define multilingual default texts for each content-element. Content-elements with Handlebars must have the file extension <em>.hbs</em>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Important:</strong> Files that contain Handlebars syntax <em>aren’t</em> valid HTML documents. They shouldn’t be handled with HTML parsers like JSoup, otherwise the handlebars syntax gets corrupted. Files that include handlebars code should use the suffix <em>.hbs</em>. <em>IntelliJ</em> supports this syntax with respective plugins.</p>
+</div>
+<div class="sect3">
+<h4 id="_handlebars_helpers"><a class="anchor local" href="#_handlebars_helpers"></a>Handlebars Helpers</h4>
+<div class="paragraph">
+<p>Besides the built-in standard helper, BSI CX may also use the following helpers:</p>
+</div>
+<div class="sect4">
+<h5 id="_bsi_nls"><a class="anchor local" href="#_bsi_nls"></a>bsi.nls</h5>
+<div class="paragraph">
+<p>This helper is used to resolve localized texts or resources inside the design. The syntax looks like this: <code>{{bsi.nls '[textKey]'}}</code>.</p>
+</div>
+<div class="paragraph">
+<p>It can also be used inside the content element Handlebars files to deliver localized default texts for different languages.</p>
+</div>
+<div class="paragraph">
+<p>Text keys are created inside the <code>design.json</code> at the property <code>nls</code>. Text that doesn’t depend on the locale is defined with the key <code>*</code>. The resolution follows from the most specific locale up to the default, e.g.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "nls": {
+    "hello.world": {
+      "*": "Hello World",
+      "de": "Hallo Welt",
+      "de-CH": "Sali Wält"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bsi_jsonstringify"><a class="anchor local" href="#_bsi_jsonstringify"></a>bsi.jsonStringify</h5>
+<div class="paragraph">
+<p>This helper is used to output a JSON object (or more precise, a DO entity from the BSI customer suite) into a string representation. Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta name="x-metadata" content="{{bsi.jsonStringify page.metadata}}"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Depending on the actual value of the 'metadata' object, this could output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta name="x-metadata" content="{&amp;quot;value&amp;quot;=123}"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bsi_localelanguage"><a class="anchor local" href="#_bsi_localelanguage"></a>bsi.localeLanguage</h5>
+<div class="paragraph">
+<p>This helper is used to output the 'language' part of a Java <em>Locale</em> string.
+Example, assuming <em>locale</em> is 'de-CH':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta name="x-language" content="{{bsi.localeLanguage locale}}"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta name="x-language" content="de"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bsi_localecountry"><a class="anchor local" href="#_bsi_localecountry"></a>bsi.localeCountry</h5>
+<div class="paragraph">
+<p>This helper is used to output the 'country' part of a Java <em>Locale</em> string. Depending on the actual value of the locale, this helper may return an empty string.
+Example, assuming <em>locale</em> is 'de-CH':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta name="x-country" content="{{bsi.localeCountry locale}}"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;meta name="x-country" content="CH"&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bsi_nl2br"><a class="anchor local" href="#_bsi_nl2br"></a>bsi.nl2br</h5>
+<div class="paragraph">
+<p>This helper is used to replace newline characters with an HTML <code>BR</code> tag in a plain text string. Example, assuming the value of <em>text</em> is 'Hello\n&lt;b&gt;World&lt;/b&gt;':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div&gt;{{bsi.nl2br text}}&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div&gt;Hello&lt;br&gt;&amp;lt;b&amp;gt;World&amp;lt;/b&amp;gt;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_eq"><a class="anchor local" href="#_eq"></a>eq</h5>
+<div class="paragraph">
+<p>Test if two elements are equals. Usage:</p>
+</div>
+<div class="paragraph">
+<p>Render 'yes' or 'no':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{#eq a b}}
+yes
+{{else}}
+no
+{{/eq}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Render 'true' or 'false':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{eq a b}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Render 'y' or 'n':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{eq a b yes='y' no='n'}}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_neq"><a class="anchor local" href="#_neq"></a>neq</h5>
+<div class="paragraph">
+<p>Test if two elements are NOT equals. Usage:</p>
+</div>
+<div class="paragraph">
+<p>Render 'yes' or 'no':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{#neq a b}}
+yes
+{{else}}
+no
+{{/neq}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Render 'true' or 'false':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{neq a b}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Render 'y' or 'n':</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{neq a b yes='y' no='n'}}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_handlebars_variables"><a class="anchor local" href="#_handlebars_variables"></a>Handlebars Variables</h4>
+<div class="paragraph">
+<p>Following variables are available to the design developer on runtime. The variables can be used in handlebars templates, e.g.: <code>{{navigation.activePage.contentId}}</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="_top_level"><a class="anchor local" href="#_top_level"></a>Top-Level</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>defaultLocale</strong> (String): Default locale of the website.
+Can be used to compare locales, for instance in an <code>hreflang</code> attribute to render the value <code>x-default</code> when a locale is equals the defaultLocale.
+Example: <code>en</code>.</p>
+</li>
+<li>
+<p><strong>designBaseUrl</strong> (String): base URL of the design on the resource server.</p>
+</li>
+<li>
+<p><strong>language</strong> (String): Current language as it’s used in the <code>lang</code> attribute of the HTML tag, e.g.: <code>de</code>.</p>
+</li>
+<li>
+<p><strong>locale</strong> (String): Complete locale.
+The locale is used to resolve text keys through the <code>bsi.nls</code> helper, e.g. <code>de-CH</code>.</p>
+</li>
+<li>
+<p><strong>localizedWebsiteBaseUrl</strong> (String) The (root) base URL of the website, including the Locale part.
+Example: <a href="http://localhost:8085/inbound/default/e/l/my-website/de-CH" class="bare">http://localhost:8085/inbound/default/e/l/my-website/de-CH</a></p>
+</li>
+<li>
+<p><strong>navigation</strong> (<em>Navigation</em> object): Contains the hierarchical navigation tree, example follows.</p>
+</li>
+<li>
+<p><strong>page</strong> (<em>Navigation Item</em> object): The currently active page.
+This is a shortcut for <code>navigation.activePage</code>.
+Note: if the current page is a website content type item which is linked to a navigation item through the <code>activeWhenWebsiteContentType</code> property, the 'page' property points to the website content type item, but the 'navigation.activePage' points to the navigation item.
+There might be a difference regarding the titles.</p>
+</li>
+<li>
+<p><strong>paginationInfo</strong> (<em>Pagination Info</em> object): Contains the information for pagination.
+This object is only filled if the pagination feature is specified in the <code>design.json</code> file.</p>
+</li>
+<li>
+<p><strong>resourceBaseUrl</strong> (String): base URL of the resource server.</p>
+</li>
+<li>
+<p><strong>title</strong> (String): Title of the website.
+Matches the field "Title" in the website-masters editor.
+Can be used in combination with the title of the current page to display the title of the HTML document, e.g.: <code>{{title}} | {{navigation.activePage.pageTitle}}</code>.</p>
+</li>
+<li>
+<p><strong>websiteBaseUrl</strong> (String) The (root) base URL of the website, without the Locale part.
+Example: <a href="http://localhost:8085/inbound/default/e/l/my-website" class="bare">http://localhost:8085/inbound/default/e/l/my-website</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_navigation_object"><a class="anchor local" href="#_navigation_object"></a>Navigation (Object)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>activePage</strong> (<em>Navigation Item</em> object) The currently active page</p>
+</li>
+<li>
+<p><strong>items</strong> (array of <em>Navigation Item</em> objects) A hierarchical list of navigation items.
+Loop through these nested arrays, to render the navigation of the website.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_navigation_item_object"><a class="anchor local" href="#_navigation_item_object"></a>Navigation Item (Object)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>id</strong> (UUID): Primary key according to table BSI_WEBSITE_REV_NAV#ID.</p>
+</li>
+<li>
+<p><strong>contentId</strong> (UUID): Primary key according to table BSI_WEBSITE_REV_CONT#ID.</p>
+</li>
+<li>
+<p><strong>url</strong> (String): The URL for a website page or website content type item.</p>
+</li>
+<li>
+<p><strong>createDate</strong> (String): The create date of the website page or website content type item.</p>
+</li>
+<li>
+<p><strong>updateDate</strong> (String): The update date of the website page or website content type item.</p>
+</li>
+<li>
+<p><strong>canonicalUrl</strong> (String): The optional canonical URL for the website page or website content type item.</p>
+</li>
+<li>
+<p><strong>active</strong> (Boolean): <code>True</code> if the navigation element (page) is active, which means it should appear highlighted in the navigation.</p>
+</li>
+<li>
+<p><strong>folder</strong> (Boolean): <code>True</code> if BSI_WEBSITE_REV_NAV_LOCALE#NAV_ITEM_TYPE = "folder". Used to distinct pages and folders in the navigation.</p>
+</li>
+<li>
+<p><strong>level</strong> (Integer): Recursion-level of the navigation element, starting with 0 = Root.</p>
+</li>
+<li>
+<p><strong>image</strong> (String): Locale independent absolute image URL.
+Can be used to render an icon for the website page in the navigation.</p>
+</li>
+<li>
+<p><strong>localizedImage</strong> (String): Locale dependent absolute image URL.
+Can be used to render a localized preview image for the website content type item.</p>
+</li>
+<li>
+<p><strong>title</strong> (String): The title of the navigation item.</p>
+</li>
+<li>
+<p><strong>pageTitle</strong> (String): The page title of the website page or website content type item.</p>
+</li>
+<li>
+<p><strong>pageTitleShort</strong> (String): The short page title of the website page or website content type item. Can be used to render an 'og:title' meta tag in the HTML.</p>
+</li>
+<li>
+<p><strong>description</strong> (String): The description of the website page or website content type item. Can be used to render a 'description' meta tag in the HTML.</p>
+</li>
+<li>
+<p><strong>descriptionShort</strong> (String): The short description of the website page or website content type item. Can be used to render an 'og:description' meta tag in the HTML.</p>
+</li>
+<li>
+<p><strong>openGraphType</strong> (String): The Open Graph type of the website page or website content type item. Can be used to render an 'og:type' meta tag in the HTML.</p>
+</li>
+<li>
+<p><strong>tags</strong> (Array of strings): An array of strings with <em>tags</em> for the website page or website content type item, as used in a tag cloud in a blog.</p>
+</li>
+<li>
+<p><strong>noindex</strong> (Boolean): Whether the website page or website content type item should be indexed by a search engine crawler. Can be used to render a 'robots/noindex' meta tag in the HTML.</p>
+</li>
+<li>
+<p><strong>nofollow</strong> (Boolean): Whether the link to a website page should be followed by a search engine crawler. Can be used to render a 'rel/nofollow' attribute in the HTML.</p>
+</li>
+<li>
+<p><strong>localizedUrls</strong> (Object): Object with URL as value and locale as key.
+Can be used to render a language-switch widget in the HTML.</p>
+</li>
+<li>
+<p><strong>metadata</strong>: (Object) Locale independent JSON metadata of the website page or website content type item.</p>
+</li>
+<li>
+<p><strong>localizedMetadata</strong>: (Object) Locale dependent JSON metadata of the website page or website content type item.</p>
+</li>
+<li>
+<p><strong>items</strong> (array of <em>Navigation Item</em> objects) A hierarchical list of child navigation items.</p>
+</li>
+<li>
+<p><strong>authorName</strong> (String): The author name of the website content type item.
+Only available for the active page.</p>
+</li>
+<li>
+<p><strong>authorImage</strong> (String): Absolute image URL.
+The author image of the website content type item.
+Can be used to render an image of the author.
+Only available for the active page.</p>
+</li>
+<li>
+<p><strong>localizedAuthorDescription</strong> (String): The localized author description of the website content type item.
+Only available for the active page.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="PaginationVariables"><a class="anchor local" href="#PaginationVariables"></a>Pagination (Object)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>currentPageNo</strong> (Number): Current page number.</p>
+</li>
+<li>
+<p><strong>numDataRecordsPerPage</strong> (Number): Number of records per page.</p>
+</li>
+<li>
+<p><strong>firstDataRecordOffset</strong> (Number): Index of the first record on the current page.</p>
+</li>
+<li>
+<p><strong>totalNumDataRecords</strong> (Number): Total number of existing records.</p>
+</li>
+<li>
+<p><strong>firstPageUrl</strong> (String): URL of the first page.</p>
+</li>
+<li>
+<p><strong>lastPageUrl</strong> (String): URL of the last page.</p>
+</li>
+<li>
+<p><strong>lastPageNo</strong> (Number): Page number of the last page.</p>
+</li>
+<li>
+<p><strong>previousPages</strong> (Array of <em>Pagination Page</em> objects): Provides information on pages previous to the current page.</p>
+</li>
+<li>
+<p><strong>nextpages</strong> (Array of <em>Pagination Page</em> objects): Provides information on the next pages following the current page.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_pagination_page_object"><a class="anchor local" href="#_pagination_page_object"></a>Pagination Page (Object)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>pageNo</strong> (Number): Page number.</p>
+</li>
+<li>
+<p><strong>url</strong> (String): URL of the page.</p>
+</li>
+<li>
+<p><strong>index</strong> (Number): Offset of the page number to the current page number.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_handlebars_variables_example_as_json"><a class="anchor local" href="#_handlebars_variables_example_as_json"></a>Handlebars Variables Example (as JSON)</h5>
+<div class="paragraph">
+<p>The following JSON snippet shows the possible content of a variables object at runtime.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "title": "BSI Software",
+  "language": "de",
+  "locale": "de-CH",
+  "page": {
+    "id": "1006",
+    "contentId": "2006",
+    "url": "ueber-bsi.html",
+    "title": "Über BSI",
+    "pageTitle": "Erfahren Sie mehr zu BSI",
+    "level": 0,
+    "active": true,
+    "localizedUrls": {
+      "de-CH": "ueber-bsi.html",
+      "en-CH": "about-bsi.html"
+    }
+  },
+  "navigation": {
+    "activePage": {
+      "id": "1006",
+      "...": "INFO: same object as in 'page'"
+    },
+    "items": [
+      {
+        "id": "1002",
+        "contentId": "2002",
+        "url": "loesungen.html",
+        "title": "Lösungen",
+        "pageTitle": "Lösungen für Ihre Kunden",
+        "level": 0
+      },
+      {
+        "id": "1003",
+        "contentId": "2003",
+        "url": "branchen.html",
+        "title": "Branchen",
+        "folder": true,
+        "level": 0,
+        "items": [
+          {
+            "id": "1004",
+            "contentId": "2004",
+            "url": "banking.html",
+            "title": "Banking",
+            "pageTitle": "Lösungen fürs Finanzwesen",
+            "level": 1
+          },
+          {
+            "id": "1005",
+            "contentId": "2005",
+            "url": "health.html",
+            "title": "Health",
+            "pageTitle": "Lösungen fürs Gesundheitswesen",
+            "level": 1
+          }
+        ]
+      },
+      {
+        "id": "1006",
+        "...": "INFO: same object as in 'page'"
+      }
+    ]
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following Handlebars (.hbs) code snippet shows how the variables provided in the example above, are used in the template. The example shows a typical template for the website navigation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{#navigation}}
+&lt;nav class="navigation"&gt;
+  {{#items}}
+    &lt;ul class="nav-item-container level-root"&gt;
+      &lt;li class="nav-item level-root"&gt;
+      &lt;!-- root level --&gt;
+      {{#active}}
+        &lt;span class="nav-item-active"&gt;{{title}}&lt;/span&gt;
+      {{/active}}
+      {{^active}}
+        &lt;a href="{{url}}"&gt;{{title}}&lt;/a&gt;
+      {{/active}}
+      &lt;/li&gt;
+      {{#items}}
+      &lt;ul class="nav-item-container level-1st"&gt;
+        &lt;!-- 1st level --&gt;
+        &lt;li class="nav-item level-1st"&gt;
+        {{#active}}
+          &lt;span class="nav-item-active"&gt;{{title}}&lt;/span&gt;
+        {{/active}}
+        {{^active}}
+          &lt;a href="{{url}}"&gt;{{title}}&lt;/a&gt;
+        {{/active}}
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      {{/items}}
+    &lt;/ul&gt;
+  {{/items}}
+&lt;/nav&gt;
+{{/navigation}}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_working_with_pre_defined_includes"><a class="anchor local" href="#_working_with_pre_defined_includes"></a>Working with Pre-Defined Includes</h5>
+<div class="paragraph">
+<p>Pre-defined includes act like a regular content-element in the website editor, but they cannot be edited by the user.
+Instead pre-defined includes are defined as a Handlebars template, which means it is possible to use all the variables provided by the website. The Handlebars placeholders are not resolved when the page is edited in the website editor, but only when the page is finally rendered in the browser.</p>
+</div>
+<div class="paragraph">
+<p>This allows to build content-elements which output data available as metadata on the page, for instance the 'page title' or the 'description'. The advantage for the content user is, that he or she must not copy/paste content already defined as metadata.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how to make a pre-defined include 'page-info.hbs', which outputs the 'page title' and the description.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="page-info" data-bsi-element="page-info" data-bsi-hide-edit-button="true"&gt;
+  &lt;p&gt;Page title: &lt;b&gt;{{page.pageTitle}}&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;Description: {{page.description}}&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the <code>design.json</code> you must define the pre-defined include and also define a content-element. You can reference the same file in both places. Note, the example shows only the relevant part of the design.json.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "contentElementGroups": [{
+    "groupId": "content",
+    "contentElements": [
+        {
+          "elementId": "page-info",
+          "file": "include/page-info.hbs",
+          "label": "Page Info",
+          "icon": "info",
+          "hidden": true
+        }
+      ]
+  }],
+  "website": {
+    "includes":{
+      "page-info": {
+        "includeType": "pre-defined",
+        "file": "include/page-info.hbs",
+        "name": "Page Info",
+        "editable": false
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Do not forget to add the new content-element/include to the <code>data-bsi-dropzone-allowed-elements</code> attribute in your dropzones.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_files"><a class="anchor local" href="#_configuration_files"></a>Configuration files</h3>
+<div class="paragraph">
+<p>This chapter describes the necessary configuration files.</p>
+</div>
+<div class="sect3">
+<h4 id="website-designjson"><a class="anchor local" href="#website-designjson"></a>Website-specific metadata inside design.json</h4>
+<div class="paragraph">
+<p>The <em>design.json</em> file is a metadata file for structured configuration data.</p>
+</div>
+<div class="paragraph">
+<p>Example for the design.json file for website designs:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "schemaVersion": "25.1",
+  "defaultLocale": "de",
+  "locales": ["de", "en"],
+  "nls": {
+    "page": {
+      "*": "Seite",
+      "en": "Page"
+    }
+  },
+  "website": {
+    "maxNavigationLevel": 2,
+    "pagination": {
+      "numDataRecordsPerPage": 20,
+      "numAdjacentPages": 3
+    },
+    "includes":{
+      "<em>page</em>": {
+        "name": "Vorlage für Inhaltsseiten",
+        "reference": "<em>page</em>",
+        "file": "include/page.hbs",
+        "contextFile": "include/page-context.json"
+      },
+      "navigation":{
+         "name":"Navigation",
+         "reference":"navigation",
+         "file":"include/navigation.hbs"
+      },
+      "header":{
+         "name":"Kopfzeile",
+         "reference":"header",
+         "file":"include/header.html",
+         "editable":true
+      },
+      "pagination-element": {
+        "name": "Pagination",
+        "contentType": "pre-defined",
+        "file": "include/pagination-element.hbs",
+        "editable": false
+      },
+      "footer":{
+         "name":"Fusszeile",
+         "reference":"footer",
+         "file":"include/footer.html",
+         "editable":true
+      }
+    }
+  },
+  "websiteContentTypes": ["blog", "press-release"]
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>schemaVersion</code> (String): Needs to be set to 1.0 or greater. For details, see chapter about the <a href="design-json.html#design-schema-version" class="xref page">design schema version</a>.</p>
+</li>
+<li>
+<p><code>defaultLocale</code> (String): Default language (must be contained in <code>locales</code>).</p>
+</li>
+<li>
+<p><code>locales</code> (Array of String): List with languages (e.g.: <code>en</code>, <code>de</code>, <code>de-CH</code>).</p>
+</li>
+<li>
+<p><code>nls</code>: Contains a map with NLS keys, which can be used within the .hbs files with <code>bsi.nls</code>.</p>
+</li>
+<li>
+<p><code>website</code>: <code>maxNavigationLevel</code> defines the maximum depth of the navigation (level of the hierarchy) that can be displayed by the design. To allow better structuring of pages and folders, the website editor allows the creation of websites with greater depth, but such pages or folders can’t be selected through the navigation on runtime. However, an internal link from one page to another page with greater depth is still possible.</p>
+</li>
+<li>
+<p><code>website</code>: <code>pagination</code> is used for pagination (see <a href="#pagination" class="local">Pagination</a>). The property <code>numDataRecordsPerPage</code> can be used to specify how many records are to be displayed simultaneously on a page. The property <code>numAdjacentPages</code> describes how many lower and higher page numbers are to be displayed in the pagination navigation. For example, if <code>numAdjacentPages</code> is set to 3 and you are on page 2, then the maximum number of pages displayed in the navigation is 1, 2, 3, 4 and 5.</p>
+</li>
+<li>
+<p><code>includes</code>: See below.</p>
+</li>
+<li>
+<p><code>websiteContentTypes</code> (Array of string): Defines which 'website content types' are allowed to be used with this design. Possible values are: "blog", "event", "pop-up", "press-release". Your BSI CX project may contribute additional website content types.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_includes"><a class="anchor local" href="#_includes"></a>Includes</h3>
+<div class="paragraph">
+<p>All files that are inherited to the database on the creation of a website as navigation item or include have to be referenced in the <code>design.json</code> file. All includes from the design.zip are inherited automatically with <code>content-type=built-in</code>, unless <code>content-type=pre-defined</code> is set explicitly.</p>
+</div>
+<div class="paragraph">
+<p>The file <code>design.html</code> matches the master and is automatically created inside the website internally as an include with the reference <code><em>master</em></code>. For that reason this include should <em>not</em> be defined in the design.json file, as it is defined already.</p>
+</div>
+<div class="paragraph">
+<p>The minimal include is <code><em>page</em></code>, which works as a template for new pages within a website.</p>
+</div>
+<div class="paragraph">
+<p>The key, which is used for the <code>bsi:include</code>-tags, is used as a unique reference to the include.</p>
+</div>
+<div class="paragraph">
+<p>For each include, the following properties can be configured:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>name</code>: Displayed name of the include.</p>
+</li>
+<li>
+<p><code>file</code>: Points to a file inside the zip archive, relative to the root of the zip file. Only .html and .hbs are allowed.</p>
+</li>
+<li>
+<p><code>contextFile</code>: Editable includes can have a context for Handlebars content elements, the same as the <code>design.hbs</code> can for e.g. Landingpages.</p>
+</li>
+<li>
+<p><code>contentType</code>: <code>built-in</code> (default, if not set manually), <code>pre-defined</code> and <code>user-defined</code>.</p>
+</li>
+<li>
+<p><code>editable</code>: True, when the include can be edited in the content editor by the user.
+Default is <code>true</code>. Must be <code>false</code> for all includes that use Handlebars.
+You should avoid to change the value of this property in design updates.
+If you must change the value, a 'direct update' of the content is enforced in the design update.
+This means, that the existing HTML content of the current website cannot be migrated and will be <em>overridden</em> with the content of the include in the new version of the design.
+Instead of changing the editable property, you should consider to define a new include with a new reference/ID.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_design_hbs"><a class="anchor local" href="#_design_hbs"></a>Design.hbs</h4>
+<div class="paragraph">
+<p>The <code>design.hbs</code> file is equivalent to the "master" of the website.
+On the creation of a website, an include with reference <code><em>master</em></code> is created with the contents of the <em>design.hbs</em> file.
+This include <em>can’t</em> be edited by the user.
+However, the design can reference other includes that may be edited, so that e.g. the footer can be edited by the user.</p>
+</div>
+<div class="paragraph">
+<p>A design can contain exactly one include for a page.
+That include uses the dynamic reference <code>{navigation.activePage.contentId}</code>.
+For the editor this include has a special meaning:
+When displayed in the editor, the full page (including the master) is displayed, but when saved, only the content of the respective page is saved.</p>
+</div>
+<div class="paragraph">
+<p>Advice: There should be no tags of the template-engine used for includes or pages that the user may edit.</p>
+</div>
+<div class="paragraph">
+<p>In the example below the value of the <code>editable</code> property from the include definition in the <em>design.json</em> file is shown as an HTML comment, for better understanding.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;{{title}} | {{page.pageTitle}}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+  &lt;h1&gt;Unicorn Inc.&lt;/h1&gt;
+  {{#navigation.index.active}}
+    &lt;img src="logo.png" width="100" height="100"&gt;
+  {{/navigation.index.active}}
+  {{^navigation.index.active}}
+    &lt;a href="{{navigation.index.url}}"&gt;&lt;img src="logo.png" width="100" height="100"&gt;&lt;/a&gt;
+  {{/navigation.index.active}}
+  &lt;bsi:include id="navigation"&gt;&lt;!-- editable: false --&gt;
+&lt;/header&gt;
+
+	&lt;!--
+    activePage is always set by the framework. When the root-URL '/' is loaded,
+    'index' is used automatically.
+    When the include-tag is resolved, it's replaced by the respective HTML-snippet.
+    Having a single root-element (e.g.: &lt;div&gt;, &lt;p&gt;, ...), that encapsulates the entire DOM of the include, is a technical requirement for any include.
+    When changed, the attribute "data-ce-include-id" is set on this element with the value of the original attribute "id".
+    --&gt;
+    {{#response.ok}}
+	&lt;bsi:include reference="{navigation.activePage.contentId}"&gt;&lt;!-- editable: true --&gt;
+    {{/response.ok}}
+    &lt;!--
+    This include is only loaded when the response is != OK. It takes a special function to set response.ok to false in the content-editor, to even make it editable in the editor.
+    --&gt;
+    {{^response.ok}}
+    &lt;bsi:include id="error"&gt;&lt;!-- editable: false --&gt;
+    {{/response.ok}}
+
+&lt;footer&gt;
+  &lt;!--
+  The contents of the "design.hbs" cannot be edited directly, so the part that should be editable by the user needs to be transferred to a separate include. --&gt;
+  &lt;bsi:include id="footer-text"&gt;&lt;!-- editable: true --&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The include "footer-text" loads the built-in include footer-text.html. This file looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-ce-content-element="footer-text"
+   data-ce-element-part="formatted-text"&gt;
+  This is a default-text for the footer. This text can be changed in the editor by the user.
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_content_editor"><a class="anchor local" href="#_content_editor"></a>Content editor</h3>
+<div class="paragraph">
+<p>Before the content is displayed in the editor, it has to be preprocessed by the <code>WebsiteProcessor</code>. It resolves includes and starts the template-engine. Just like the live-website, the content editor also creates an object with website variables.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example for content, when it’s loaded from the database:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;bsi:include reference="footer-text"&gt;
+{{title}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example for content, when it’s shown in the editor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div
+  data-bsi-include-reference="footer-text"
+  data-bsi-element="footer-text"
+  data-bsi-element-part="formatted-text"&gt;
+  Ipsem Lorum
+&lt;/div&gt;
+BSI Website</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="pagination"><a class="anchor local" href="#pagination"></a>Pagination</h3>
+<div class="paragraph">
+<p>Pagination can be used to distribute data supplied by an external system (e.g. via REST) to several pages on a website, so that only part of the data is displayed on one page. With <em>Next</em> and <em>Back</em> buttons on the website page, it is then possible to display a separate set of data on each page.</p>
+</div>
+<div class="paragraph">
+<p>The pagination must be defined via <code>website: pagination</code> in <code>design.json</code> and provided via an include. The include must exist in the <code>design.json</code> file and have the special include type <code>pre-defined</code> (see <a href="#website-designjson" class="local">Website-specific metadata inside design.json</a>). The include itself should have the extension <code>.hbs</code> and use handlebars. The possible values for the Handlebars templates are documented in the chapter on website variables (see <a href="#PaginationVariables" class="local">Pagination (Object)</a>). Besides, the attribute <code>data-bsi-hide-edit-button</code> should be set, as includes that use handlebars should not be editable in the website editor. The following is an example of a possible template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="pagination-element" data-bsi-element="pagination-element" data-bsi-hide-edit-button="true"&gt;
+    &lt;a href="{{pagination.firstPageUrl}}"&gt;First Page&lt;/a&gt;
+    {{#each pagination.previousPages}}
+        &lt;a href="{{url}}"&gt;[{{pageNo}}]&lt;/a&gt;
+    {{/each}}
+    {{pagination.currentPageNo}}
+    {{#each pagination.nextPages}}
+        &lt;a href="{{{url}}}"&gt;[{{pageNo}}]&lt;/a&gt;
+    {{/each}}
+    &lt;a href="{{pagination.lastPageUrl}}"&gt;Last Page&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This template (include) is then rendered by the template engine at runtime. One possible output is the following. Everything except page 20 are links pointing to the respective pages.</p>
+</div>
+<div class="paragraph">
+<p><em>[First Page] [18] [19] 20 [21] [22] [Last Page]</em></p>
+</div>
+<div class="paragraph">
+<p>The data to be rendered via pagination can finally be displayed with the table content element. For this, a content element with the element part <code>table</code> should be extended by the attribute <code>data-bsi-show-pagination-field</code>. The following is an example of a possible table template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="table" data-bsi-element-part="table" data-bsi-show-pagination-field=""&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Title 1&lt;/th&gt;
+            &lt;th&gt;Title 2&lt;/th&gt;
+            &lt;th&gt;Title 3&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Text 1&lt;/td&gt;
+            &lt;td&gt;Text 2&lt;/td&gt;
+            &lt;td&gt;Text 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Text 1&lt;/td&gt;
+            &lt;td&gt;Text 2&lt;/td&gt;
+            &lt;td&gt;Text 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the attribute <code>data-bsi-show-pagination-field</code> is set, the checkbox <code>with Pagination</code> will be displayed in the configuration of the table content element. In order to use pagination, the checkbox should be activated.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/table-with-pagination.png" alt="table with pagination">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_limitations"><a class="anchor local" href="#_limitations"></a>Limitations</h4>
+<div class="paragraph">
+<p>There are some limitations to pagination:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pagination has only been implemented for tables (i.e. the element part <code>table</code>).</p>
+</li>
+<li>
+<p>The pagination can only be used directly in a website. We do not support the embedding of such a table in an include. Other content (for example for landing pages) is also not supported.</p>
+</li>
+<li>
+<p>To enable a meaningful display of the handlebars code in the website editor, the Handlebars templates are rendered when the editor is initially loaded. Afterwards, the rendering happens only exceptionally. This can lead to the display being incorrect if page-dependent elements (such as <em>{{navigation.activePage}}</em>) are used in the template.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_metadata_images_for_the_navigation"><a class="anchor local" href="#_metadata_images_for_the_navigation"></a>Metadata / Images for the navigation</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/header_data.png" alt="header data">
+</div>
+</div>
+<div class="paragraph">
+<p>Each page and each folder of a website can have JSON metadata and an image to describe the navigation. These two elements are special, because they can only be edited programmatically and within a project-specific step. A possible use case is a REST webservice, which is embedded to the design through javascript. The project-specific step can return the image and the metadata on a GET request. This allows the rendered website to give images and information to the navigation.</p>
+</div>
+<div class="paragraph">
+<p>These two attributes are invisible per default. However, they can be enabled through the BSI CX setting <em>Website-Editor</em>. Both attributes are the same for every language, so it’s <em>not</em> possible to deposit different images for a German and an English website.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_google_recaptcha"><a class="anchor local" href="#_security_google_recaptcha"></a>Security - Google reCAPTCHA</h3>
+<div class="paragraph">
+<p>It’s highly advised to use the Google reCAPTCHA service "I’m not a robot", when using username/password authentication with non-internal users (public). For that we use the optional BSI CX module <code>com.bsiag.studio.media.googlerecaptcha</code>, which can be configured in the BSI CX settings.</p>
+</div>
+<div class="paragraph">
+<p>Example for including the dependency in the BSI CX app and the dev pom.xml:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;!-- google reCAPTCHA service for website step --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.bsiag.studio&lt;/groupId&gt;
+      &lt;artifactId&gt;com.bsiag.studio.media.googlerecaptcha&lt;/artifactId&gt;
+    &lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A script can be included on the website’s design.html:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;script src="https://www.google.com/recaptcha/enterprise.js" async defer&gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The captcha-field can be added to a login form content element as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">Content Element for the login form.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;form ... data-bsi-element="login-form"&gt;
+&lt;!-- Content Element: Google reCAPTCHGA Enterprise --&gt;
+&lt;div data-bsi-element-part="form-field" class="form-field-container form-field"&gt;
+  &lt;label data-bsi-remove-if="live"&gt;{{bsi.nls "captcha"}}&lt;/label&gt;
+  &lt;input data-bsi-remove-if="live" type="text" data-bsi-form-field-type="captcha" value="Google reCAPTCHA" id="g-recaptcha-response" name="g-recaptcha-response"&gt;
+  &lt;div class="g-recaptcha" data-sitekey="the site key from the google api recaptcha registration" data-action="login"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The label text can be added to the design.json as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">    "captcha": {
+      "*": "Captcha",
+      "de": "Captcha"
+    },</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After that, the field ID of the captcha field (on the website, that uses the design, simply open the edit dialogue and scroll down to the captcha field ID) has to be set to <code>g-recaptcha-response</code>. This value has to match the settings of the Google reCAPTCHA in the administration view.</p>
+</div>
+<div class="paragraph">
+<p>The last step is to generate a reCAPTCHA key on the Google Cloud of the customer/company and register it in the settings under <em>Administration</em> - <em>Customer Experience</em> - <em>Settings</em> - <code>Google reCAPTCHA Settings</code>.</p>
+</div>
+<div class="paragraph">
+<p>For local testing, the URL of the BSI CX website <em>can’t</em> be <code>localhost</code>. For this purpose, the local domain <code>bsiag.local</code> may be used. Simply go to the administration view - <em>CX</em> - <em>Settings</em> under <code>base URL for public links</code> and register a second path, e.g. <code>bsiw0160</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "_type": "start.BaseUrlSetting",
+  "default": false,
+  "inboundBaseUrl": "http://bsiw0160.bsiag.local:8085/inbound/default",
+  "qualifier": "default",
+  "resourceBaseUrl": "http://bsiw0160.bsiag.local:8085/dev/resources"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then select this URL on the smart field <code>base path</code> on the website step.</p>
+</div>
+<div class="paragraph">
+<p>Here is an approximate guide for the creation of a reCAPTCHA site on the example of BSI (customers have to adapt it to their company):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create project: BSI CX - Website Step → projectId=bsi-cx-website-step</p>
+</li>
+<li>
+<p>Add the service <code>reCAPTCHA Enterprise API</code> to the project</p>
+</li>
+<li>
+<p>Create login/access data for that api by creating a service account <code>Service account for bsi cx</code> with role <code>recaptcha enterprise agent</code> → serviceAccountId=service-account-for-bsi-cx</p>
+</li>
+<li>
+<p>Add access key (json file) for that agent service account in IAM section of Google Cloud → credentials json file</p>
+</li>
+<li>
+<p>Create reCAPTCHA site key <a href="https://console.cloud.google.com/security/recaptcha/create?authuser=1&amp;project=bsi-cx-website-step">here</a> (this is just an example)</p>
+</li>
+<li>
+<p>Add domains bsi-software.com and bsiag.local to site → recaptchaSiteKey=6Lcxp-…​._lWrq</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Documentation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://cloud.google.com/recaptcha-enterprise/docs/getting-started?hl=en">Choosing the setup method for reCAPTCHA Enterprise</a></p>
+</li>
+<li>
+<p><a href="https://cloud.google.com/recaptcha-enterprise/docs/libraries?hl=en#cloud-console">reCAPTCHA Enterprise client libraries</a></p>
+</li>
+<li>
+<p><a href="https://console.cloud.google.com/marketplace/product/google/recaptchaenterprise.googleapis.com?returnUrl=%2Fsecurity%2Frecaptcha%3Fproject%3Ddspa-course-2019-236311%26folder%3D%26organizationId%3D&amp;authuser=1&amp;project=bsi-customer-suite-website">Marketplace reCAPTCHA Enterprise API</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creation_of_websites_from_existing_landingpage_templates"><a class="anchor local" href="#_creation_of_websites_from_existing_landingpage_templates"></a>Creation of websites from existing landingpage templates</h3>
+<div class="paragraph">
+<p>The following steps are necessary to create a website template from an existing landingpage template:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>For navigation inside the website, the navigation has to be created inside an include.</p>
+</li>
+<li>
+<p>Includes for the header- and footer-area have to be defined inside the <code>design.json</code> file. Furthermore, the <em>Page-Include</em> has to be defined. That area contains the proper content of the website.</p>
+</li>
+<li>
+<p>For landingpages images and other resources of the design can be referenced with relative paths. Because the base URL of a website points to the location of the website and not to the design, the handlebars template <code>{{designBaseUrl}}</code> needs to be put in front of every design resource URL. For example, <code>"img/my-image.jpg"</code> has to be converted to <code>"{{designBaseUrl}}/img/my-image.jpg"</code>. The handlebars template is replaced with the design’s correct URL by the BSI CX server on runtime.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_teasers"><a class="anchor local" href="#_teasers"></a>Teasers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Teasers are personalized data tailored by BSI CX.
+An external system can request teaser data via EIP.
+The response is a JSON object which contains personalized text, images and callback URLs to BSI CX.
+The external system renders the JSON data into HTML and uses existing tools and libraries in that specific web frontend.</p>
+</div>
+<div class="paragraph">
+<p>However, teasers can also be used internally in BSI CX, for instance in landingpages, in e-mails and in websites.
+For that BSI CX provides a special content element, which is rendered server- or client-side.
+Like the external system, BSI CX requests teaser data from EIP when the content element is rendered.</p>
+</div>
+<div class="paragraph">
+<p>Depending on the use case, BSI CX design- and content authors can use either server- or client-side rendering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>E-mail</strong>: only server-side rendering is possible</p>
+</li>
+<li>
+<p><strong>Landingpages</strong>: server- or client-side rendering</p>
+</li>
+<li>
+<p><strong>Websites</strong>: server- or client-side rendering</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_server_side_rendering"><a class="anchor local" href="#_server_side_rendering"></a>Server-side Rendering</h3>
+<div class="paragraph">
+<p>The BSI CX design must provide a teaser content element, based on a Handlebars template.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example for a teaser content element (teaser.hbs):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-handlebars hljs" data-lang="handlebars">{{#if numTeasers}}&lt;div class="teaser-display" data-bsi-element="teaser-display"
+     data-bsi-teaser-rendering="{{teaserRendering.value}}"
+     data-bsi-teaser-target="{{teaserTarget.value}}"&gt;
+    &lt;img src="{{teasers.[0].imageUrl}}" alt="" class="teaser-image-url"&gt;
+    &lt;div class="teaser-text"&gt;{{{teasers.[0].text}}}&lt;/div&gt;
+    &lt;a href="{{teasers.[0].ctaUrl}}" class="button cc-jumbo-button w-inline-block teaser-cta-url"&gt;
+        &lt;div class="teaser-cta-text"&gt;{{teasers.[0].ctaText}}&lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;{{/if}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example for the context file for the teaser content element (teaser-context.json):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "teaserTarget": {
+    "value": "Standard"
+  },
+  "teaserRendering": {
+    "value": "server-side"
+  },
+  "numTeasers": 1,
+  "teasers": [
+    {
+      "imageUrl": "{{designBaseUrl}}/img/placeholder.svg",
+      "text": "Lorem ipsum dolor sit amet.",
+      "ctaUrl": "#",
+      "ctaText": "Dolore Magna"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following properties in the JSON are mandatory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>numTeasers</strong>: a teaser request may return 0 to <em>n</em> teasers.
+Check this value to control, whether the teaser should appear in the DOM.
+The BSI CX framework sets this value to 0 if the current participant is not a CRM customer, or EIP returned no teasers for the current participant.</p>
+</li>
+<li>
+<p><strong>teasers</strong>: an array of teasers, ordered by priority.
+Note that the teaser data is not fixed and depends on the content configuration.
+See the chapter about the JSON design to understand how the teaser data is configured in BSI CX.
+Usually you build a specific to teaser content element to render a fixed set of teaser data properties.
+The property names form the contract between the BSI CX content configuration for the teaser,
+and the Handlebars code in the content element.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You must set these properties in the context JSON, in order to render a proper preview in the BSI CX content editor.
+All other properties in the context JSON are regular properties required for the Handlebars feature.
+In this example the design defines two fields 'teaserTarget' and 'teaserRendering' for this content element.</p>
+</div>
+<div class="paragraph">
+<p>The following data BSI attributes, can be used for teaser content elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>data-bsi-teaser-rendering</code> controls whether the content element is rendered by the BSI CX server.
+If the value is set to <code>server-side</code>, fixed in the template or by the content editor,
+the BSI CX framework will load the Handlebars template for this content element, request the teaser data
+from EIP, will render the Handlebars template into HTML and replace the content element in the DOM.</p>
+</li>
+<li>
+<p><code>data-bsi-teaser-target</code> this value is set either fixed in the template or by the content editor.
+Valid teaser targets are configured in the BSI CX settings.
+In the content you can specify a target for the teaser content element.
+This target is added to the request when BSI CX requests a teaser from EIP.
+Example value: <code>Standard</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_client_side_rendering"><a class="anchor local" href="#_client_side_rendering"></a>Client-side Rendering</h3>
+<div class="paragraph">
+<p>If the value for the attribute <code>data-bsi-teaser-rendering</code> is set to <code>client-side</code> the HTML remains untouched by the BSI CX backend.
+However, the attribute <code>data-bsi-teaser-endpoint</code> will be added to the DOM.
+The attribute value provides an absolute URL to make a REST call from the web frontend to the EIP system.</p>
+</div>
+<div class="paragraph">
+<p>If your BSI CX design must support client-side rendering, you need to add some JavaScript code to your design.
+A simple example implementation can look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">/**
+ * Initializes the teasers in the document. This method is a blueprint for other frontend implementations,
+ * not only in BSI CX designs, but also in external CMS or websites. Here, the endpoint URL is provided by
+ * the BSI CX backend. The URL consists of these 3 parts:
+ *
+ * 1. The EIP host and path to the interface
+ * 2. The teaser target (e.g. 'Standard')
+ * 3. The teaser user ID (typically a UUID)
+ *
+ * Example: https://eip.bsi-software-com/web-api/get-teaser/Standard/1234567890
+ */
+function initTeasers() {
+  let $elements = document.querySelector('[data-bsi-teaser-endpoint]');
+  if (!$elements) {
+    return; // Skip. There are no teasers to handle.
+  }
+
+  Array.of($elements).forEach($e =&gt; {
+    let teaserEndpoint = $e.getAttribute('data-bsi-teaser-endpoint');
+    if (!teaserEndpoint) {
+      console.log('Teaser endpoint attribute is empty -&gt; Skip teaser request, hide teaser content element.');
+      $e.classList.add("w-hidden");
+      return;
+    }
+    console.log('Request teaser. Endpoint:', teaserEndpoint);
+    fetch(teaserEndpoint)
+        .then(response =&gt; {
+          response.json().then(response =&gt; {
+            console.log('REST response for teaser:', response);
+            if (!Array.isArray(response)) {
+              throw new Error('Expected an array as teaser response');
+            }
+            let numTeasers = response.length;
+            if (!numTeasers) {
+              throw new Error('Teaser response is empty');
+            }
+            console.log('Teaser response contains ' + numTeasers + ' teaser elements. Using first element...');
+            let teaser = response[0];
+            $e.querySelector('.teaser-text').innerHTML = teaser.text;
+            $e.querySelector('.teaser-image-url').setAttribute('src', teaser.imageUrl);
+            $e.querySelector('.teaser-cta-text').innerText = teaser.ctaText;
+            $e.querySelector('.teaser-cta-url').setAttribute('href', teaser.ctaUrl);
+          });
+        })
+        .catch(reason =&gt; {
+          console.error('REST request for teaser failed', reason);
+        });
+  });
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This function manipulates the DOM to apply the values from the teaser data request.
+See the code snippet for the <code>teaser.hbs</code> above, to understand how the HTML looks like for this example.
+Also note that some properties values can contain HTML, to avoid security issues, you should always sanitize the HTML before adding it to the DOM.</p>
+</div>
+<div class="paragraph">
+<p>When the BSI CX backend detects, that it is not possible to request teaser data, for the current participant in BSI CX,
+  the attribute <code>data-bsi-teaser-endpoint</code> will be empty.
+This can happen, if the participant is not a CRM customer.
+In that case the design author should skip the REST request and hide the teaser content element, or show a generic placeholder instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_json_design_teaser_content_type"><a class="anchor local" href="#_the_json_design_teaser_content_type"></a>The JSON Design / Teaser Content Type</h3>
+<div class="paragraph">
+<p>You have already learned that teasers are basically JSON data.
+This means a content author must configure JSON data for a teaser, as he or she would do with HTML content.
+In order to do that, BSI CX defines the content type 'Teaser'.</p>
+</div>
+<div class="paragraph">
+<p>BSI CX comes with a special built-in design for this content type.
+Basically this design type works as a regular HTML based design.
+BSI CX uses the regular content editor to work with teaser content.
+However, although we work with HTML content in the content editor, this content is later transformed to JSON data by the BSI CX framework.</p>
+</div>
+<div class="paragraph">
+<p>In order to do that, the content elements in the JSON design must use the following data BSI attributes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>data-bsi-json-property</code> Defines the JSON property name.
+By default, the value for the property name is extracted from the body of the DOM element where this attribute is defined.</p>
+</li>
+<li>
+<p><code>data-bsi-json-value-attribute</code> Optional attribute used in case, where the value is not stored in the body of the DOM element,
+but must be extracted from an attribute. See <em>Example 2</em> below.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-handlebars hljs" data-lang="handlebars">&lt;div class="content-element-wrap" data-bsi-element="plain-text"&gt;
+  &lt;div class="json-property"&gt;{{jsonProperty.value}}&lt;/div&gt;
+  &lt;div class="paragraph-light" data-bsi-json-property="{{jsonProperty.value}}"&gt;{{value.value}}&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Example 1: a simple plain text content element for the JSON editor.
+The content user can freely define a property name in the content editor.</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-handlebars hljs" data-lang="handlebars">&lt;div class="detail-image-container" data-bsi-element="image"&gt;
+&lt;div class="json-property"&gt;{{jsonProperty.value}}&lt;/div&gt;
+&lt;img src="{{image.srcUrl}}" width="920" alt="" class="detail-image"
+    data-bsi-json-property="{{jsonProperty.value}}" data-bsi-json-value-attribute="src"&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Example 2: an image element for the JSON editor.
+The content user can freely define a property name in the content editor.</em></p>
+</div>
+<div class="paragraph">
+<p>Note, the DIV with the class "json-property" is just eye candy to visualize the property name in the content editor (see the image below).</p>
+</div>
+<div class="paragraph">
+<p>As in a regular design, you can use existing element parts to build your JSON content elements,
+like the image element part, for choosing images from the BSI CX media library.</p>
+</div>
+<div class="paragraph">
+<p>You can also build JSON content elements that emit multiple json properties,
+like a CTA button that emits a ctaText and a ctaUrl.</p>
+</div>
+<div class="paragraph">
+<p>With that you can provide a reasonable content preview to the content user, although he or she configures just JSON data.
+This is how the JSON design looks like in the content editor:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/json-design-preview.png" alt="json design preview">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fixed_json_designs"><a class="anchor local" href="#_fixed_json_designs"></a>Fixed JSON Designs</h4>
+<div class="paragraph">
+<p>For rapid prototyping it is very convenient to have a flexible JSON design, which allows to define arbitrary property names.</p>
+</div>
+<div class="paragraph">
+<p>However, in a real-life project you want to fix property names, because they are the contract between the BSI CX content,
+  the teaser data stored in EIP, the design which must render that data or even an external third party system,
+  which must render teaser data.</p>
+</div>
+<div class="paragraph">
+<p>For that purpose the BSI CX design developer can make a <em>fixed</em> JSON design.
+In that design all property names are pre-defined, and they can not be changed by the content author.
+It is also not possible to add additional content elements or remove existing content elements.
+All this is achieved by using the existing BSI CX design features, like hiding copy and remove buttons in the content editor
+  or limiting the number of content elements in a dropzone.
+In comparison to the examples above a fixed plain text element can look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-handlebars hljs" data-lang="handlebars">&lt;div class="content-element-wrap" data-bsi-element="plain-text"&gt;
+  &lt;div class="json-property"&gt;plainText&lt;/div&gt;
+  &lt;div class="paragraph-light" data-bsi-json-property="plainText"&gt;{{value.value}}&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Example 3: a plain text content element for the JSON editor.
+The property name is fixed (plainText) and can not be changed by the content user.</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © BSI Business Systems Integration AG.</p>
+</footer><script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/section-numbers.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/call-outs.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

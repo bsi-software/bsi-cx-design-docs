@@ -1,0 +1,2600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content Elements and Parts :: BSI CX Design Usage Documentation</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" type="image/svg+xml" href="../../_/pink-logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../_/apple-touch-icon.png">
+    <link rel="mask-icon" href="../../_/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="msapplication-config" href="../../_/browserconfig.xml">
+    <link rel="manifest" href="../../_/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="article cx-design">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">BSI CX Design Usage Documentation</a>
+      <div class="navbar-item search hide-for-print" role="search">
+        <div id="search-field" class="field">
+          <input id="search-input" type="search" placeholder="Search" >
+        </div>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item navbar-item-logo">
+          <span class="logo">
+              <a href="https://www.bsi-software.com/"><img src="../Overview/index.html/../../../_/img/bsi-logo-inverted.svg" alt="BSI"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="cx-design" data-version="26.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">CX Design Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design-json.html">design.json</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bsi-data-attributes.html">Data BSI Attributes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="content-elements.html">Content Elements and Parts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-editor.html">Content Editor</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">CX Design Documentation</span>
+    <span class="version">26.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../Overview/index.html">CX Design Documentation</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Overview/index.html">Overview</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">26.2</a>
+        </li>
+        <li class="version">
+          <a href="../26.1/index.html">26.1</a>
+        </li>
+        <li class="version">
+          <a href="../25.2/index.html">25.2</a>
+        </li>
+        <li class="version">
+          <a href="../24.2/index.html">24.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../Overview/index.html" class="home-link" aria-label="Home"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">CX Design Documentation</a></li>
+    <li><a href="content-elements.html">Content Elements and Parts</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">26.2</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../Overview/index.html">Overview</a>
+    <a class="version is-current" href="content-elements.html">26.2</a>
+    <a class="version" href="../26.1/content-elements.html">26.1</a>
+    <a class="version is-missing" href="../25.2/index.html">25.2</a>
+    <a class="version is-missing" href="../24.2/index.html">24.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Content Elements and Parts</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes the structure of content elements.
+Content elements are defined in an HTML or Handlebars file each.
+They contain a single block parent element with the <code>data-bsi-element</code> attribute with a unique identifier for the content element.</p>
+</div>
+<div class="paragraph">
+<p>The following listing illustrates a very simple content element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="logo"&gt;
+    &lt;img src="logo.png" alt="My Company"/&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As we can see in the listing, <code>data-bsi-element</code> defines the identifier of the content element.
+It must not contain any spaces.
+The identifier corresponds to the value that can be used in the attribute called <code>data-bsi-dropzone-allowed-elements</code> in the dropzone.
+The element marked with the identifier, when used, is inserted into the relevant dropzone (not only the child elements).</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The content editor specifically highlights the content elements.
+To make sure this works properly, all content elements must be block elements rather than inline elements.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>A content element can define one or more internal dropzones.
+The definition is the same as for <code>design.html</code> and <code>design.hbs</code>.
+For example, use it with a content element for a 3-column layout with three internal dropzones.
+While the dropzones may be nested arbitrarily, please pay attention to usability.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_types"><a class="anchor local" href="#_types"></a>Types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are two distinct styles of content elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML-Elements: HTML-Elements only consist of HTML <em>Element Parts</em>. Element Parts specify a fixed structure of a DOM-subtree that is directly manipulated inside the content editor.
+This type has been supported ever since the release of BSI CX.</p>
+</li>
+<li>
+<p>Handlebars-Elements: Handlebars-Elements use Handlebars as template engine.
+The element consists of <em>Template Parts</em> that specify parts of the element editor.
+The HTML of the element is created by rendering the Handlebars-Template with the variables exported by the Template Parts.
+Handlebars-Elements cannot include traditional HTML <em>Element Parts</em>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="element-parts"><a class="anchor local" href="#element-parts"></a>Element Parts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A content element part references, inside a content element, an area (such as text or image) that can be edited directly with the BSI CX content editor.
+The content element "text with image" knows, for example, the two areas <code>image</code> and <code>plain-text</code>.
+The identifiers must be adopted exactly as they are.
+The following listing illustrates the example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;figure class="element text-with-image" data-bsi-element="text-with-image"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;img class="image" data-bsi-element-part="image" src="example.jpg"/&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;figcaption class="text" data-bsi-element-part="plain-text"&gt;Lorem ipsum&lt;/figcaption&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/figure&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This is the content element definition.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The <code>image</code> part defines an editable image.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>plain-text</code> part defines an editable plain text.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The individual parts are likely to contain sample content already.
+This content must fit in terms of the structure (e.g., only plain text with <code>plain-text</code>, and a correct table definition with <code>table</code>, etc.)
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect2">
+<h3 id="plain-text"><a class="anchor local" href="#plain-text"></a>Plain Text</h3>
+<div class="paragraph">
+<p>The part <code>plain-text</code> can be applied to any HTML element that can contain text.
+The text is inserted within the element.
+The element must not have children with other content element parts (content is removed).
+A single-line text field without formatting is available as the editor.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample usage of the plain text part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;h1 data-bsi-element="title-h1" data-bsi-element-part="plain-text" class="element title-h1"&gt;Lorem ipsum&lt;/h1&gt;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration"><a class="anchor local" href="#_configuration"></a>Configuration</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>studioLinkEnabled</strong>: This boolean value controls whether the 'CX Link' button is visible.
+Default is <code>false</code>.</p>
+</li>
+<li>
+<p><strong>multiline</strong>: This boolean value controls whether the field is single- or multiline.
+Default is <code>false</code>.</p>
+</li>
+<li>
+<p><strong>fieldHeight</strong>: This integer value controls the field height in the form of the content editor.
+Default is <code>5</code>. The unit is <em>Eclipse Scout</em> grid height (Property 'h' in GridData).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="element-parts-formatted-text"><a class="anchor local" href="#element-parts-formatted-text"></a>Formatted Text</h3>
+<div class="paragraph">
+<p>The part <code>formatted-text</code> can be applied to any HTML element that can contain text.
+The element must not have children with other content element parts (content is removed).
+The rich text field with a limited number of formatting options is available as an editor.
+For more information about the available configuration options see chapter <a href="#rich-text-editor" class="local">[rich-text-editor]</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample usage of the formatted text part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;section data-bsi-element="section" data-bsi-element-part="formatted-text"&gt;
+    &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+    &lt;p&gt;Proin porta &lt;strong&gt;pharetra est non&lt;/strong&gt; molestie.&lt;/p&gt;
+    &lt;p&gt;&lt;a href="https://www.example.org/"&gt;More&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="element-parts-html"><a class="anchor local" href="#element-parts-html"></a>HTML</h3>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This part should only be used for prototyping purposes.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>The <code>html</code> part can be applied to any HTML element.
+The code is inserted within the element.
+The element must not have children with other content element parts (content is removed).
+A text field is used as the editor.
+HTML can be written directly into this field.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample usage of the HTML part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="html" data-bsi-element-part="html"&gt;
+    &lt;iframe src="https://www.openstreetmap.org/export/embed.html" style="height: 500px;"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It is not allowed to place any <code>data-bsi-element</code> or <code>data-bsi-element-part</code> attributes inside the HTML code.
+This won’t work as expected and leads to invalid content.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="video"><a class="anchor local" href="#video"></a>Video</h3>
+<div class="paragraph">
+<p>The <code>video</code> part can be applied to any block level HTML element.
+This part can be used to display information and thumbnails of external videos.
+It can also be used to embed external videos.
+Within the element, various elements can be used as placeholders:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each <code>&lt;iframe&gt;</code> element is used to embed an external video player.</p>
+</li>
+<li>
+<p>Each <code>&lt;img&gt;</code> element with a <code>data-bsi-video-thumbnail</code> attribute is used to display the video thumbnail.</p>
+</li>
+<li>
+<p>Each HTML element with the <code>data-bsi-video-title</code> attribute is used to display the video title.</p>
+</li>
+<li>
+<p>Each HTML element with the <code>data-bsi-video-description</code> is used to display the video description.</p>
+</li>
+<li>
+<p>Each <code>&lt;a&gt;</code> element with the <code>data-bsi-video-link</code> is used to place a link to the external video.
+The text of the hyperlink will not be touched, only the <code>href</code> attribute will be filled.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Fetching the video’s title and description may requires an active API key for the appropriate provider.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Boolean attributes like <code>data-bsi-video-title</code> require an empty value <code>=""</code> or sample value like <code>="true"</code>.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>The following external video providers are supported:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">YouTube</dt>
+<dd>
+<p>Without a configured API key, only the thumbnails are automatically picked.
+More information on obtaining a YouTube API key: <a href="https://developers.google.com/youtube/v3/getting-started" class="bare">https://developers.google.com/youtube/v3/getting-started</a></p>
+</dd>
+<dt class="hdlist1">Vimeo</dt>
+<dd>
+<p>The Vimeo-integration requires no additional configuration or credentials.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Be aware that there are two kinds of URLs involved:
+One is the link to the video platform itself for the <code>href</code> attribute on the <code>&lt;a&gt;</code> tag and there is the embedded URL for the <code>&lt;iframe&gt;</code> player.
+In the case of YouTube <a href="https://www.youtube.com/watch?v=YpnFs4aBLQA" class="bare">https://www.youtube.com/watch?v=YpnFs4aBLQA</a> is the link to the video platform.
+The corresponding embedded URL would be <a href="https://www.youtube.com/embed/YpnFs4aBLQA" class="bare">https://www.youtube.com/embed/YpnFs4aBLQA</a>.
+If you want to provide sample content for your element you may have to fill both URLs in the right tag.
+The following listing illustrates the use of sample content for a simple video element:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example of a simple video element.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="element video" data-bsi-element="video-simple"&gt;
+    &lt;div class="responsive-video" data-bsi-element-part="video" data-bsi-video-data-link="https://www.youtube.com/watch?v=YpnFs4aBLQA"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;iframe width="1120" height="630" frameborder="0" src="https://www.youtube.com/embed/YpnFs4aBLQA" allow="autoplay; encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The link to the video platform is placed inside the <code>data-bsi-video-data-link</code> attribute.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The embed video URL is placed inside the <code>src</code> attribute of the <code>&lt;iframe&gt;</code> tag.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>This results in the following content element:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/simple-video-element.png" alt="Simple video element in action.">
+</div>
+<div class="title">Figure 1. Simple video element in action.</div>
+</div>
+<div class="paragraph">
+<p>A more complex video element would be the following:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example of a complex video element.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="element video" data-bsi-element="video-thumbnail"&gt;
+    &lt;div class="video-thumbnail" data-bsi-element-part="video" data-bsi-video-data-link="https://www.youtube.com/watch?v=YpnFs4aBLQA"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;p&gt;
+            &lt;a href="https://www.youtube.com/watch?v=YpnFs4aBLQA" data-bsi-video-link="" target="_blank"&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+                &lt;img src="https://i.ytimg.com/vi/YpnFs4aBLQA/maxresdefault.jpg" alt="" data-bsi-video-thumbnail=""/&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+            &lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h3 data-bsi-video-title=""&gt;BSI Tech Lovers&lt;/h3&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+        &lt;p data-bsi-video-description=""&gt;Für mehr WOW-Momente mit BSI. Monika Freiburghaus, Ralf Muri, Thomas Lindauer und Urs Frick zeigen Einblicke in ihre persönlichen WOW-Momente.&lt;/p&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The link to the video platform is placed inside the <code>data-bsi-video-data-link</code> attribute.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The link to the video platform is also placed inside the <code>href</code> attribute.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The placeholder image can also be part of the design, it is not mandatory to provide the URL to the real image here.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The content of the first tag marked with <code>data-bsi-video-title</code> will be used as placeholder for the title.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The content of the first tag marked with <code>data-bsi-video-description</code> will be used as placeholder for the video description.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>This results in the following content element:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/complex-video-element.png" alt="Complex video element in action.">
+</div>
+<div class="title">Figure 2. Complex video element in action.</div>
+</div>
+<div class="paragraph">
+<p>The video part is quite powerful and can be used in various ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enrich your landing page or website with embedded videos.</p>
+</li>
+<li>
+<p>Use video thumbnails in your content.</p>
+</li>
+<li>
+<p>Send emails with link, thumbnail, title and description of an external video.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="image-part"><a class="anchor local" href="#image-part"></a>Image</h3>
+<div class="paragraph">
+<p>The <code>image</code> element part can only be placed inside of a <code>&lt;img&gt;</code> or <code>&lt;a&gt;</code> tag.
+The source is inserted in the <code>src</code> attribute.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example of an image element</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="image-simple"&gt;
+    &lt;img src="example.jpg" alt="Example image" data-bsi-element-part="image" /&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is not possible to omit the image of an <code>image</code> part.
+Therefore it is mandatory to specify an image in the content editor.
+Otherwise a validation error will occur.</p>
+</div>
+<div class="sect3">
+<h4 id="_srcset"><a class="anchor local" href="#_srcset"></a>srcset</h4>
+<div class="paragraph">
+<p>By specifying the <code>srcset</code> attribute, the images are also scaled accordingly.
+If a <code>srcset</code> attribute is present, the <code>src</code> attribute is set to the image at its highest resolution (according to the defined <code>srcset</code>).
+If there is no <code>srcset</code> attribute, the selected image is not scaled and is placed directly as <code>src</code>.
+For images with dynamic sources (the image is set through the story), the definition of the <code>srcset</code> is ignored.
+If you set an image in the content editor, make sure it is of decent size. After saving the content, the image is scaled to the sizes specified in the <code>srcset</code> attribute and stored on the BSI CX resource server. Depending on the resolution of device that is requesting the landing page/website, a different resolution of the image is loaded.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+We highly recommend to set the <code>srcset</code> attribute.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Example of a image element that scales to the sizes specified in srcset</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="image-simple"&gt;
+    &lt;img src="example-800w.jpg" srcset="example-480w.jpg 480w, example-800w.jpg 800w" alt="Example image" data-bsi-element-part="image" /&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The attribute <code>data-bsi-hide-link</code> controls whether the field <em>URL/internet address</em> and the checkbox <em>Open in new window</em> is visible and editable in the content editor. A design developer may still wrap the image inside an <code>&lt;a&gt;</code> tag in the content element, but the user cannot change the link.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_providing_an_image_through_the_story"><a class="anchor local" href="#_providing_an_image_through_the_story"></a>Providing an image through the story</h4>
+<div class="paragraph">
+<p>Dynamic image sources can be specified with angle brackets, e.g. <code>&lt;my-dynamic-image&gt;</code>. The image URL will then be provided by the story. Please note that in this case the <code>srcset</code> attribute will be ignored.  Thus, dynamic image sources are not scaled.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="background-image"><a class="anchor local" href="#background-image"></a>background-image</h3>
+<div class="paragraph">
+<p>An arbitrary element which permits the use of a CSS <code>background-image</code>.
+It places the CSS attribute <code>background-image</code>.
+The image selection is available as the editor just like with the image part.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the background-image part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="element scene" data-bsi-element="scene"&gt;
+    &lt;div data-bsi-element-part="background-image" style="background-image: url('example.jpg')"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="table-part"><a class="anchor local" href="#table-part"></a>table</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> oder <code>&lt;td&gt;</code> element with a table element as a direct child element.
+The table content is filled according to the editor (including colgroup).
+<strong>Colspan is not supported.</strong> On even or odd rows or columns, the CSS class <code>even</code> or <code>odd</code> is placed.
+The <code>&lt;th&gt;</code> tag is used for header columns, if specified.
+<strong>This part does not support <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tags.</strong></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+It is possible to use an iterator to generate dynamic tables.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the table part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="element table" data-bsi-element="simple-table" data-bsi-element-part="table"&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Firstname&lt;/th&gt;
+            &lt;th&gt;Lastname&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John&lt;/td&gt;
+            &lt;td&gt;Doe&lt;/td&gt;
+            &lt;td&gt;42&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="element-parts-iterator"><a class="anchor local" href="#element-parts-iterator"></a>iterator</h3>
+<div class="paragraph">
+<p>An arbitrary element.
+The attribute <code>data-bsi-iterator</code> can be defined on this element.
+The attribute <code>data-bsi-iterator-item</code> must be defined on the element or on one of the included elements.
+This defines the element to be duplicated.
+If <code>data-bsi-iterator</code> is defined and the iterator does not provide any data, the entire element is removed.
+Otherwise, only the element to be duplicated is marked with <code>data-bsi-iterator-item</code>.</p>
+</div>
+<div class="paragraph">
+<p>A text field is used as the editor.
+The name of the iterator can be placed in this text field.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the iterator part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="element iterator" data-bsi-element-part="iterator" data-bsi-iterator="Customer"&gt;
+    &lt;div class="customer" data-bsi-iterator-item="Customer"&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;Name&lt;/dt&gt;
+            &lt;dd&gt;{Customer.name}&lt;/dd&gt;
+            &lt;dt&gt;Address&lt;/dt&gt;
+            &lt;dd&gt;{Customer.address}&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="news-snippets"><a class="anchor local" href="#news-snippets"></a>news-snippets</h3>
+<div class="paragraph">
+<p>An arbitrary element.
+Displays a news item.
+Within the element, elements with the <code>data-bsi-property</code> attribute can be defined.
+This attribute may have the following values: <code>image</code>, <code>title</code>, <code>headline</code>, or <code>text</code>.
+The content of these elements is then replaced accordingly with the value of the selected news item.
+In that context, elements from property <code>title</code>, <code>headline</code>, and <code>text</code> are mandatory.</p>
+</div>
+<div class="paragraph">
+<p>If a link in BSI CX is configured into a news snippet, <code>title</code> and <code>image</code> are automatically supplemented with a link.
+When generating the news list, the following CSS classes are automatically set on a news snippet to permit better styling of the individual elements:</p>
+</div>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+news-nth-X
+</td>
+<td class="hdlist2">
+<p>the position in the list. E.g., <code>news-nth-9</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+odd
+</td>
+<td class="hdlist2">
+<p>odd position in the list</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+even
+</td>
+<td class="hdlist2">
+<p>even position in the list</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+first
+</td>
+<td class="hdlist2">
+<p>first news snippet</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+last
+</td>
+<td class="hdlist2">
+<p>last news snippet</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the news-snippets part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="element news" data-bsi-element="news-snippets" data-bsi-element-part="news-snippets"&gt;
+    &lt;div class="news-image element"&gt;
+        &lt;img class="ns-image" src="placeholder.jpg" data-bsi-property="image"/&gt;
+    &lt;/div&gt;
+    &lt;div class="news-text element"&gt;
+        &lt;h2 class="ns-title" data-bsi-property="title"&gt;Breaking News&lt;/h2&gt;
+        &lt;p class="ns-headline" data-bsi-property="headline"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+        &lt;p class="ns-text" data-bsi-property="text"&gt;Ea vis odio voluptua, pri ei facer denique.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="form"><a class="anchor local" href="#form"></a>form</h3>
+<div class="paragraph">
+<p>A <code>&lt;form&gt;</code> element.
+The element must contain a submit button and may also contain a reset button.
+Those buttons must be <code>&lt;input&gt;</code> elements.
+In the form configuration, the reset button can be hidden or displayed.
+In that case, the DOM attribute <code>disabled</code> is set on the input element.</p>
+</div>
+<div class="paragraph">
+<p>The form element must contain an element with the <code>data-bsi-form-validation</code> attribute, and this attribute must contain an element with the <code>data-bsi-form-validation-item</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>Within the element with <code>data-bsi-form-validation</code>, the element with <code>data-bsi-form-validation-item</code> is duplicated for each error in the server-side form validation, and the validation message is inserted as the content of the validation item element.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Boolean attributes like <code>data-bsi-form-validation</code> require an empty value <code>=""</code> or sample value like <code>="true"</code>.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>In addition to the display in the above-described element, a <code>data-bsi-form-validation-message</code> attribute is set for each defective form field.
+It contains the validation error for the respective field.
+The attribute can be used to style the field with CSS if there is an error (CSS selector checks for the presence of the attribute) or to display the error message with CSS and/or JavaScript in the respective field.</p>
+</div>
+<div class="paragraph">
+<p>The following form fields can be marked as mandatory fields in the content editor.
+If this is done, the <code>required</code> attribute is set in the relevant HTML element.
+Thus, the mandatory elements are styled using the respective CSS selectors.</p>
+</div>
+<div class="paragraph">
+<p>To exclude a certain form from BSI CX you set the <code>data-bsi-form-ignore</code> attribute on the form tag.
+Any form with this marker will be left untouched by BSI CX.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the form part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="element form" data-bsi-element="slim-form"&gt;
+    &lt;form class="form form-wrapper" data-bsi-element-part="form" id="form"&gt;
+        &lt;ul class="form-validation" data-bsi-form-validation=""&gt;
+            &lt;li class="form-validation-item" data-bsi-form-validation-item=""&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class="form-content" data-bsi-dropzone="form-content" data-bsi-dropzone-allowed-elements="form-field"&gt;
+        &lt;/div&gt;
+        &lt;div class="form-button-bar"&gt;
+            &lt;input type="submit" class="form-button send" value="Senden" /&gt;
+            &lt;input type="reset" class="form-button reset" value="Zurücksetzen" /&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dynamic_forms_form_field_rules"><a class="anchor local" href="#_dynamic_forms_form_field_rules"></a>Dynamic Forms / Form-Field Rules</h4>
+<div class="paragraph">
+<p>BSI CX supports dynamic forms.
+The feature provides a Domain‑Specific Language (DSL) in JSON, which is interpreted by the front-end and back-end.
+The DSL allows defining form-field rules, which can manipulate the DOM state dynamically.
+A simple example: a form-field rule defines that when a checkbox is clicked, a group of other fields (fieldset) becomes visible.</p>
+</div>
+<div class="paragraph">
+<p>In order to support that feature in a BSI CX design, the design must set the feature flag <code>formFieldRules</code> in the <code>design.json</code> (see <a href="#feature-toggle" class="local">[feature-toggle]</a>).</p>
+</div>
+<div class="paragraph">
+<p>The design must also include the NPM module <a href="https://www.npmjs.com/package/@bsi-cx/web-frontend">@bsi-cx/web-frontend</a> and initialise the library, e.g.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let module = window.bsiCxWebFrontend;
+let fieldRules = new module.FieldRules();
+fieldRules.init();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is recommended to add a content-element for 'fieldset', which uses the HTML element with the same name and provides a dropzone which accepts other form-fields.
+The fieldset must have a configurable ID, which can be referenced by the form-field rules.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the dynamic forms feature is active, the attribute <code>data-bsi-json-document</code> is set on the <code>form</code> element.
+It stores the DSL as (encoded) JSON.
+A BSI CX user can manage the form-field rules via GUI.
+There’s a tab 'Form-field rules' in the form element part.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="form-field"><a class="anchor local" href="#form-field"></a>form-field</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> element.
+Contains a <code>&lt;label&gt;</code> and an <code>&lt;input&gt;</code> element.
+In the configuration, the label, initial value, mandatory field, and input type can be defined.
+The following input types are supported:</p>
+</div>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+text
+</td>
+<td class="hdlist2">
+<p>For a simple text field.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+email
+</td>
+<td class="hdlist2">
+<p>Input field, that accepts a valid e-mail address.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+tel
+</td>
+<td class="hdlist2">
+<p>Input field, that accepts a phone number.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+password
+</td>
+<td class="hdlist2">
+<p>A password input field, that shows <code>*</code> instead of the real characters.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+number
+</td>
+<td class="hdlist2">
+<p>An input field, that accepts only numbers.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+range
+</td>
+<td class="hdlist2">
+<p>An input field, that shows a numeric range slider.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+date
+</td>
+<td class="hdlist2">
+<p>An input field, that can be used to select a certain date.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+datetime-local
+</td>
+<td class="hdlist2">
+<p>Input field, that accepts a date and a specific time.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+time
+</td>
+<td class="hdlist2">
+<p>Input field, that accepts a time.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+file
+</td>
+<td class="hdlist2">
+<p>Input field, that can be used to upload a file.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>To fixate the form field type, the <code>data-bsi-form-field-fixed-type</code> attribute can be used on the element.
+Doing so allows the setup of a customized date field, for example.
+The type of the form field is then set and cannot be changed in the content editor.</p>
+</div>
+<div class="paragraph">
+<p>The attribute <code>data-bsi-hide-required</code> controls whether the <em>mandatory</em> checkbox is visible and editable in the content editor. If the checkbox is not shown, the original state of the <code>required</code> attribute is preserved, as defined by the content element.</p>
+</div>
+<div class="paragraph">
+<p>In the configuration of form field parts in the <code>design.json</code> three optional text fields can be enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "partId": "form-field",
+  "label": "Form Field",
+  "config": {
+    "infoTextEnabled": true, <i class="conum" data-value="1"></i><b>(1)</b>
+    "mandatoryTextEnabled": true, <i class="conum" data-value="2"></i><b>(2)</b>
+    "invalidTextEnabled": true <i class="conum" data-value="3"></i><b>(3)</b>
+  }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>An informative text on the usage of the form field, saved into the <code>data-bsi-form-info-text</code> attribute on the form field element.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>A text that can be shown to the user to indicate that a field is mandatory, saved into the <code>data-bsi-form-mandatory-text</code> attribute on the form field.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>A text that can be shown to indicate the user input does not fulfill the necessary format, saved into the <code>data-bsi-form-invalid-text</code> attribute on the form field.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>Those three configuration options enable three fields in the editor of the form field part:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form-field-editor.png" alt="Form field editor with enabled text fields.">
+</div>
+<div class="title">Figure 3. Form field editor with enabled text fields.</div>
+</div>
+<div class="paragraph">
+<p>The values are written into custom HTML attributes that can be used in the design for <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_forms_using_javascript">client-side form validation</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Be aware, that not all browsers support all types of input fields.
+Some browsers require a polyfill to handle certain types of form fields.
+It is up to the developer to use polyfills where this is required.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the form-field part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="form-field" data-bsi-element="date-field" data-bsi-element-part="form-field" data-bsi-form-field-fixed-type=""&gt;
+    &lt;label for="date" class="label"&gt;Date&lt;/label&gt;
+    &lt;input id="date" class="input" type="date" value="2009-11-13" required="" data-bsi-form-mandatory-text="This field is mandatory." /&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Boolean attributes like <code>data-bsi-form-field-fixed-type</code> require an empty value <code>=""</code> or sample value like <code>="true"</code>.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="element-parts-form-checkbox"><a class="anchor local" href="#element-parts-form-checkbox"></a>form-checkbox</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> element.
+Contains a <code>&lt;label&gt;</code> and an <code>&lt;input&gt;</code> element with the <code>checkbox</code> type.</p>
+</div>
+<div class="paragraph">
+<p>The attribute <code>data-bsi-hide-required</code> controls whether the <em>mandatory</em> checkbox is visible and editable in the content editor. If the checkbox is not shown, the original state of the <code>required</code> attribute is preserved, as defined by the content element.</p>
+</div>
+<div class="paragraph">
+<p>If enabled the <code>data-bsi-form-info-text</code> and <code>data-bsi-form-mandatory-text</code> attributes can be used on this element part. For further information on usage and how to enable them see <a href="#form-field" class="local">form-field</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the form-checkbox part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="form-checkbox" data-bsi-element-part="form-checkbox" class="element checkbox"&gt;
+    &lt;input type="checkbox" id="checkbox1" /&gt;
+    &lt;label for="checkbox1"&gt;Checkbox 1&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="element-parts-form-textarea"><a class="anchor local" href="#element-parts-form-textarea"></a>form-textarea</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> element.
+Contains a <code>&lt;label&gt;</code> and a <code>&lt;textarea&gt;</code> element.</p>
+</div>
+<div class="paragraph">
+<p>The attribute <code>data-bsi-hide-required</code> controls whether the <em>mandatory</em> checkbox is visible and editable in the content editor. If the checkbox is not shown, the original state of the <code>required</code> attribute is preserved, as defined by the content element.</p>
+</div>
+<div class="paragraph">
+<p>If enabled the <code>data-bsi-form-info-text</code>, <code>data-bsi-form-mandatory-text</code> and <code>data-bsi-form-invalid-text</code> attributes can be used on this element part. For further information on usage and how to enable them see <a href="#form-field" class="local">form-field</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the form-textarea part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="form-textarea" data-bsi-element-part="form-textarea" class="form-field form-element"&gt;
+    &lt;label for="textarea" class="label"&gt;Description&lt;/label&gt;
+    &lt;textarea id="textarea" rows="5" cols="20" class="textarea" maxlength="500"&gt;Lorem ipsum&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="form-select"><a class="anchor local" href="#form-select"></a>form-select</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> element.
+Contains a <code>&lt;label&gt;</code> and a <code>&lt;select&gt;</code> element with the elements option.
+The pre-allocation of the element can be controlled with the <code>data-bsi-value</code> and <code>data-bsi-value-list</code> attributes.
+The <code>data-bsi-value</code> attribute contains the preal-location, and the values available for selection are defined in the <code>data-bsi-value-list</code> attribute.
+A line break (<code>\n</code> or <code>\r\n</code>) separates each of those.</p>
+</div>
+<div class="paragraph">
+<p>To fixate the values that are available for selection, the <code>data-bsi-form-select-fixed-value-list</code> attribute can be set on the element.
+Then, the list of values cannot be changed in the content editor.
+Only the preselection can be changed.</p>
+</div>
+<div class="paragraph">
+<p>The attribute <code>data-bsi-hide-required</code> controls whether the <em>mandatory</em> checkbox is visible and editable in the content editor. If the checkbox is not shown, the original state of the <code>required</code> attribute is preserved, as defined by the content element.</p>
+</div>
+<div class="paragraph">
+<p>If enabled the <code>data-bsi-form-info-text</code> and <code>data-bsi-form-mandatory-text</code> attributes can be used on this element part. For further information on usage and how to enable them see <a href="#form-field" class="local">form-field</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The <code>multiple</code> attribute is not supported.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the form-select part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="form-select" data-bsi-element-part="form-select" class="form-select form-element" data-bsi-value-list="Yes
+No
+Unsure" data-bsi-value="No"&gt;
+    &lt;label for="select" class="label"&gt;Decision&lt;/label&gt;
+    &lt;div class="select-wrapper"&gt;
+        &lt;select size="1" id="select"&gt;
+            &lt;option&gt;Yes&lt;/option&gt;
+            &lt;option selected=""&gt;No&lt;/option&gt;
+            &lt;option&gt;Unsure&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;div class="dropdown" role="presentation"&gt;a&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="form-radio"><a class="anchor local" href="#form-radio"></a>form-radio</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> element.
+Contains a <code>&lt;label&gt;</code> and a <code>&lt;div&gt;</code> element as a radio group.
+The radio group is marked with the <code>data-bsi-radio-group</code> attribute.
+The radio group contains radio items.
+These are identified with the <code>data-bsi-radio-item</code> attribute and contain a <code>&lt;label&gt;</code> and an <code>&lt;input&gt;</code> element with the radio type.
+The preselection of this element can be controlled with the <code>data-bsi-value</code> and <code>data-bsi-value-list</code> attributes.
+Same as the <a href="#form-select" class="local">form-select</a> part.
+The same applies to the <code>data-bsi-form-select-fixed-value-list</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>The attribute <code>data-bsi-hide-required</code> controls whether the <em>mandatory</em> checkbox is visible and editable in the content editor. If the checkbox is not shown, the original state of the <code>required</code> attribute is preserved, as defined by the content element.</p>
+</div>
+<div class="paragraph">
+<p>If enabled the <code>data-bsi-form-info-text</code> and <code>data-bsi-form-mandatory-text</code> attributes can be used on this element part. For further information on usage and how to enable them see <a href="#form-field" class="local">form-field</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the form-radio part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="form-radio" data-bsi-element-part="form-radio" class="form-radio form-element"&gt;
+    &lt;label class="label"&gt;To be or not to be?&lt;/label&gt;
+    &lt;div data-bsi-radio-group=""&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;div class="form-radio-item" data-bsi-radio-item=""&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+            &lt;input type="radio" id="radio1" /&gt;
+            &lt;label for="radio1"&gt;Radio-Button 1&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>data-bsi-radio-group</code> element contains the prototype element.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The <code>data-bsi-radio-item</code> element is the prototype element.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Be aware, that <code>data-bsi-radio-item</code> must be right inside <code>data-bsi-radio-group</code>.
+Any intermediate element will be removed.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Boolean attributes like <code>data-bsi-radio-item</code> require an empty value <code>=""</code> or sample value like <code>="true"</code>.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="basic-dynamic-value-list"><a class="anchor local" href="#basic-dynamic-value-list"></a>basic-dynamic-value-list</h3>
+<div class="paragraph">
+<p>This part offers functionality for the integration of BSI Suite value lists into any HTML form, providing REST endpoints for the purpose of retrieving values from such lists.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This element part is a backport of the <a href="content-editor.html#dynamic-value-list" class="xref page">dynamic value list template part</a>.
+Check this chapter for a detailed documentation.
+You should prefer the template part version, because it is more flexible regarding the DOM structure.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect3">
+<h4 id="_editor"><a class="anchor local" href="#_editor"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/dynamic-value-list-element-part.png" alt="Part user interface.">
+</div>
+<div class="title">Figure 4. Part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fields"><a class="anchor local" href="#_fields"></a>Fields</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Value list</strong>: A reference to a BSI Suite value list.
+Mandatory.</p>
+</li>
+<li>
+<p><strong>Initial value</strong>: Optional initial value for the HTML form field.
+Only values belonging to the referenced <strong>Value list</strong> are available.
+Only editable if <strong>Value list</strong> is set.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is also possible to define an initial value within the configuration of a story, which supersedes the initial value of the content.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the <code>basic-dynamic-value-list</code> part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="basic-dynamic-value-list"  data-bsi-element-part="basic-dynamic-value-list" data-bsi-entity-id=""&gt;
+  &lt;label&gt;Field&lt;/label&gt;
+  &lt;input type="text" class="w-input dynamic-select" data-bsi-entity-key-value="" data-bsi-entity-key-display-text=""&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_usage"><a class="anchor local" href="#_usage"></a>Usage</h4>
+<div class="listingblock">
+<div class="title">The element’s HTML source.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="dynamic-value-list" data-bsi-entity-id="{{context.dataModelValue.type}}" &gt;
+    &lt;input
+      data-bsi-entity-key-value="{{context.dataModelValue.value}}"
+      data-bsi-entity-key-display-text="{{context.displayText}}" &gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The DOM structure is identical to the <code>form-field</code> element part.
+The <code>data-bsi-*</code> attributes must be placed on the root DIV element and on the nested INPUT element, as shown in the example above.</p>
+</div>
+<div class="sect4">
+<h5 id="_design_json"><a class="anchor local" href="#_design_json"></a>Design.json</h5>
+<div class="listingblock">
+<div class="title">The element’s entry in the <code>design.json</code> file.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "elementId": "basic-dynamic-value-list",
+  "file": "content-elements/forms/basic-dynamic-value-list.html",
+  "icon": "dropdown",
+  "label": "Dynamic Value List (Basic)",
+  "description": "Use dynamic source e.g. CRM",
+  "parts": [
+    {
+      "partId": "basic-dynamic-value-list",
+      "label": "Dynamic select"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec-link-part"><a class="anchor local" href="#sec-link-part"></a>link</h3>
+<div class="paragraph">
+<p>The part is defined on the <code>&lt;a&gt;</code> element.
+As an option, the link content can be set with the <code>data-bsi-link-fixed-inner-html</code> attribute.
+If this attribute is present, only the <code>href</code> attribute of the link can be edited in the content editor.
+If the link text is to be placed in a tag within the hyperlink (e.g. in a span next to an <code>&lt;img&gt;</code> tag), the optional <code>data-bsi-link-text-part</code> attribute can be set on the tag.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Boolean attributes like <code>data-bsi-link-fixed-inner-html</code> could require an empty value <code>=""</code> or sample value like <code>="true"</code>.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the link part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="cta" class="element cta"&gt;
+    &lt;a href="https://www.bsi-software.com/" data-bsi-element-part="link"&gt;More&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the link part with <code>data-bsi-link-fixed-inner-html</code>.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="cta" class="element cta"&gt;
+    &lt;a href="[dynamic_link]" data-bsi-element-part="link" data-bsi-link-fixed-inner-html&gt;
+        &lt;span&gt;
+            &lt;p&gt; Some static content &lt;/p&gt;
+            &lt;p data-bsi-element-part="formatted-text"&gt; Add your text here! &lt;/p&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the link part with <code>data-bsi-link-text-part</code>.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="cta"&gt;
+    &lt;a data-bsi-element-part="link" href="#" role="button"&gt;
+        &lt;i class="icon icon-028-arrow-back"&gt;&lt;/i&gt;
+        &lt;span data-bsi-link-text-part&gt;The link text is &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="social-follow"><a class="anchor local" href="#social-follow"></a>social-follow</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> element, contains <code>&lt;div&gt;</code> elements with a <code>data-bsi-social-follow</code> attribute.
+These attributes contain the value of the respective social media service, such as "Facebook", "Twitter", "Pinterest", etc.</p>
+</div>
+<div class="paragraph">
+<p>The elements with <code>data-bsi-social-follow</code> must have the <code>social-media-item</code> class.
+This class is used to manage the visibility of each individual social media channel in the editor.</p>
+</div>
+<div class="paragraph">
+<p>The elements with <code>data-bsi-social-follow</code> must also contain an <code>&lt;a&gt;</code> element.
+The link <code>href</code> can be preselected with a URL or with CX links in square brackets (e.g., [Facebook]).</p>
+</div>
+<div class="paragraph">
+<p>The <code>&lt;a&gt;</code> element, in turn, can contain additional elements.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the social-follow part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="social-follow" data-bsi-element-part="social-follow"&gt;
+    &lt;div data-bsi-social-follow="Facebook" class="social-media-item"&gt;
+        &lt;a href="https://www.facebook.com/"&gt;
+            &lt;img src="facebook.png" alt="Facebook" /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div data-bsi-social-follow="Twitter" class="social-media-item"&gt;
+        &lt;a href="https://www.twitter.com/"&gt;
+            &lt;img src="twitter.png" alt="Twitter" /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="social-share"><a class="anchor local" href="#social-share"></a>social-share</h3>
+<div class="paragraph">
+<p>A <code>&lt;div&gt;</code> element, contains <code>&lt;div&gt;</code> elements with <code>data-bsi-social-share</code>.
+These attributes contain the value of the respective social media service, such as Facebook, Twitter, Pinterest, or even e-mail.</p>
+</div>
+<div class="paragraph">
+<p>The elements with <code>data-bsi-social-share</code> must have the <code>social-media-item</code> class.
+This class is used to control the visibility of each individual social media channel in the editor.</p>
+</div>
+<div class="paragraph">
+<p>The elements with <code>data-bsi-social-share</code> must also contain an <code>&lt;a&gt;</code> element.
+The link <code>href</code> can be preselected with a URL or with Studio links in square brackets (e.g., <code>[Facebook]</code>).</p>
+</div>
+<div class="paragraph">
+<p>To share it via e-mail, the content of the <code>href</code> is then a <code>mailto:?subject=(subject.with.title)&amp;body=(description.with.url)</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>&lt;a&gt;</code> element, in turn, can contain additional elements.</p>
+</div>
+<div class="paragraph">
+<p>The URL supports a list of wildcards that are specific to the social share part.
+When they are issued, all wildcards are automatically URL-encoded.
+These wildcards cannot be selected in the step configuration in Studio.
+The following wildcards exist:</p>
+</div>
+<div class="hdlist">
+<table>
+<tbody><tr>
+<td class="hdlist1">
+url
+</td>
+<td class="hdlist2">
+<p>The URL/internet address of the current Studio webpage or the user-defined URL.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+description
+</td>
+<td class="hdlist2">
+<p>The description text of the current Studio webpage or the user-defined description text (a maximum of 300 characters).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+description.short
+</td>
+<td class="hdlist2">
+<p>Same as description, but a maximum of 140 characters; all additional characters are truncated.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+description.with.url
+</td>
+<td class="hdlist2">
+<p>Same as description; in addition, the url is added to the end of the description text.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+title
+</td>
+<td class="hdlist2">
+<p>The title of the current Studio webpage or the user-defined title (a maximum of 100 characters).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+title.with.url
+</td>
+<td class="hdlist2">
+<p>Same as title, and, in addition, the url is added to the end of the description text.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+subject.with.title
+</td>
+<td class="hdlist2">
+<p>Same as title, and, in addition, a text "Share web-site:" is added to the beginning of the title; is used as the subject in an e-mail.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+preview.image.url
+</td>
+<td class="hdlist2">
+<p>The URL/internet address for the preview image of the webpage according to the configuration in the content editor.</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="social-share" data-bsi-element-part="social-share"&gt;
+    &lt;div class="social-media-info"&gt;Share this page&lt;/div&gt;
+    &lt;div data-bsi-social-share="E-Mail" class="sm-email social-media-item share"&gt;
+        &lt;a href="mailto:?subject=(subject.with.title)&amp;body=(description.with.url)"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div data-bsi-social-share="Facebook" class="sm-facebook social-media-item share"&gt;
+        &lt;a href="https://www.facebook.com/sharer/sharer.php?u=(url)" target="_blank"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div data-bsi-social-share="LinkedIn" class="sm-linkedin social-media-item share"&gt;
+        &lt;a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=(url)&amp;summary=(title)&amp;source=FancyUnicorns" target="_blank"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div data-bsi-social-share="Pinterest" class="sm-pinterest social-media-item share"&gt;
+        &lt;a href="http://pinterest.com/pin/create/button/?url=(url)&amp;description=(title)&amp;media=(preview.image.url)" target="_blank"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div data-bsi-social-share="Twitter" class="sm-twitter social-media-item share"&gt;
+        &lt;a href="https://twitter.com/intent/tweet?url=(url)&amp;text=(description.short)" target="_blank"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div data-bsi-social-share="WhatsApp" class="sm-whatsapp social-media-item share"&gt;
+        &lt;a href="whatsapp://send?text=(title.with.url)" target="_blank"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div data-bsi-social-share="Xing" class="sm-xing social-media-item share"&gt;
+        &lt;a href="https://www.xing.com/spi/shares/new?url=(url)" target="_blank"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="url-provider"><a class="anchor local" href="#url-provider"></a>url-provider</h3>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<strong>Deprecated</strong> since release 25/2.
+Instead, create a content element which defines the attribute <code>data-bsi-url-provider</code>
+and uses a Handlebars <code><a href="content-editor.html#plain-text#plain-text" class="xref page">plain-text</a></code> template part to write the attribute value.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>The URL provider content element part can be used to load dynamic data inside a story.
+Inside the content editor, the URL provider part only offers a text field to define its name.
+When using the content inside your story, each URL provider part will produce a separate outlet.
+This outlets can be connected to any URL provider (e.g. the <em>Charts</em> Step).</p>
+</div>
+<div class="listingblock">
+<div class="title">Example usage of the URL provider part.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="pie-chart" data-bsi-element-part="url-provider" class="mb-4 chart-js"&gt;
+  &lt;img src="./pie-chart-placeholder.png" alt="" class="w-100" data-bsi-element-part="image"/&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When a story renders the content, the HTML tag with the <code>url-provider</code> part will have a <code>data-bsi-url</code> attribute.
+This attribute will contain an absolute URL to the BSI CX server, where the data can be requested.</p>
+</div>
+<div class="sect3">
+<h4 id="_using_the_chart_url_provider"><a class="anchor local" href="#_using_the_chart_url_provider"></a>Using the Chart URL Provider</h4>
+<div class="paragraph">
+<p>We created a small JavaScript library to use the chart URL provider in a template.
+Take a look at the repository on <a href="https://github.com/bsi-software/bsi-cx-chart/tree/releases/22.0">GitHub</a> for more information.
+To integrate the library, install it with NPM:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell script hljs" data-lang="shell script">npm install --save github:bsi-software/bsi-cx-chart#semver:^1.1.2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You also must install a chart library of your choice, currently there are only bindings for <a href="https://www.chartjs.org/">Chart.js</a>.
+You can install it using npm:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell script hljs" data-lang="shell script">npm install --save chart.js</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, create your content element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="pie-chart" data-bsi-element-part="url-provider" class="chart-js"&gt;
+  &lt;img src="./pie-chart-placeholder.png" alt="" class="w-100" data-bsi-element-part="image"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This will be replaced when the library is initialized, and the data from the URL provider is available.
+So it’s recommended to put some placeholders here.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>To use the library, you must initialize it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">import 'chart.js/auto'; <i class="conum" data-value="1"></i><b>(1)</b>
+
+import {ChartConfig, ChartUrlProvider} from '@bsi-cx/chart';
+import ChartConfigColor from '@bsi-cx/chart/src/config/color';
+
+/**
+ * @type {{border: ChartConfigColor, background: ChartConfigColor}[]}
+ */
+const colors = [
+  ChartConfigColor.of('#ff6384ff', '#ff638466'),
+  ChartConfigColor.of('#36a2ebff', '#36a2eb66'),
+  ChartConfigColor.of('#cc65feff', '#cc65fe66'),
+  ChartConfigColor.of('#ffce56ff', '#ffce5666')
+]; <i class="conum" data-value="2"></i><b>(2)</b>
+
+const config = new ChartConfig()
+  .withColors(...colors);
+
+document.querySelectorAll('.chart-js') <i class="conum" data-value="3"></i><b>(3)</b>
+  .map(element =&gt; new ChartUrlProvider(element, config))
+  .forEach(chart =&gt; chart.render());</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Initialize the Chart.js library.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Optional, can be used to define your own set of colors.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Select all URL provider parts you want to initialize with the <code>ChartUrlProvider</code>.</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="template-parts"><a class="anchor local" href="#template-parts"></a>Template Parts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is also possible to build content elements based on the Handlebars templating engine. For design developers this means that they have the choice of either building content elements using the HTML <em>Element Parts</em> described in the last chapter, or the new Handlebars <em>Template Parts</em>.
+Crucially it is not allowed to mix both in one content element.</p>
+</div>
+<div class="paragraph">
+<p><em>Template Parts</em> work in quite a different way from <em>Element Parts</em>: All they do is supply a part of the content element editor, as the name suggests.
+Each <em>Template Part</em> has a defined set of variables that it provides to render the content elements Handlebars template.
+A full example might look something like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">The content element as defined in <code>design.json</code>.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "elementId": "medium-quote-hbs",
+  "type": "template-element",
+  "file": "content-elements/content/medium-quote-hbs.hbs",
+  "contextFile": "content-elements/content/medium-quote-hbs.json",
+  "icon": "heading",
+  "label": "Medium Quote",
+  "templateParts": [
+    {
+      "partId": "multiline-plain-text",
+      "partContextId": "text", <i class="conum" data-value="1"></i><b>(1)</b>
+      "label": "Text"
+    },
+    {
+      "partId": "checkbox",
+      "partContextId": "italic", <i class="conum" data-value="2"></i><b>(2)</b>
+      "label": "Text Kursiv anzeigen"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The content element consists of two <em>Template Parts</em>, crucially they have to be explicitly mentioned in the <code>design.json</code>, since - as opposed to the <em>Element Parts</em> they do not have an explicit declaration in the HTML DOM.
+The first <em>Template Part</em> lets the user define a multiline text without any markup, the second exposes a boolean value, that in this example is used to set the text to italic, if the user checks the checkbox.
+This results in the following content element editor:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/medium-quote-content-element-editor.png" alt="The combined Template Parts build the complete content element editor.">
+</div>
+<div class="title">Figure 5. The combined Template Parts build the complete content element editor.</div>
+</div>
+<div class="paragraph">
+<p>The handlebars template and the default values are as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">Handlebars template of the content element.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="content-element-wrap" data-bsi-element="medium-quote-hbs"&gt;
+    &lt;div class="paragraph-light" {{#if italic.value}}style="font-style: italic"{{/if}}&gt;{{text.value}}&lt;/div&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">The corresponding default context variables, supplied in the context file.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "text": { <i class="conum" data-value="1"></i><b>(1)</b>
+    "value": "Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." <i class="conum" data-value="2"></i><b>(2)</b>
+  },
+  "italic": { <i class="conum" data-value="1"></i><b>(1)</b>
+    "value": false <i class="conum" data-value="2"></i><b>(2)</b>
+  }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>partContextId</code> defines the name of the instance of the <em>Template Part</em> since there can be more than one of the same type.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Each <em>Template Part</em> supplies an object containing specified context variables that can be used to render the template.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The variable name is prefixed with the <code>partContextId</code> when it is referred to in the Handlebars template.</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect2">
+<h3 id="_including_handlebars_content_elements_in_design_hbs"><a class="anchor local" href="#_including_handlebars_content_elements_in_design_hbs"></a>Including Handlebars Content Elements in <code>design.hbs</code></h3>
+<div class="paragraph">
+<p>HTML content elements could be included in the <code>design.html</code> by copying the DOM from the content element source file into the body of the design.
+Changes in the default value took place directly in the DOM of the design. Handlebars content elements work analogous.</p>
+</div>
+<div class="paragraph">
+<p>The template from the content element source code can be copied into the <code>design.hbs</code>, but two additional steps are necessary.
+Let’s take the example of a simple text paragraph content element.</p>
+</div>
+<div class="paragraph">
+<p>The content element consists of a Handlebars template, and a variable context as such:</p>
+</div>
+<div class="listingblock">
+<div class="title">The template of the content element as defined in the design ZIP.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="paragraph-light" data-bsi-element="paragraph"&gt;{{paragraph.value}}&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">The accompanying context with the variables for the template.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "paragraph": {
+    "value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After copying the Handlebars template to <code>design.hbs</code>, we need to supply the values for the variables contained in the element in <code>design-context.json</code>.
+This is achieved by adding the custom attribute <code>data-bsi-context-scope</code> with a unique name for the element on content element.
+All variables used within the element need to be prefixed with this unique name.
+This unique name then also refers to the element in <code>design-context.json</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">Part of <code>design.hbs</code>.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="paragraph-light" data-bsi-element="paragraph" data-bsi-context-scope="headingParagraph"&gt;{{headingParagraph.paragraph.value}}&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">A complete design context referencing the Handlebars content element above.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "headingParagraph": {
+    "paragraph": {
+      "value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-parts-plain-text"><a class="anchor local" href="#template-parts-plain-text"></a>plain-text</h3>
+<div class="paragraph">
+<p>This template part supplies a text input field, into which the user can input a single line of plain text.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_2"><a class="anchor local" href="#_editor_2"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/plain-text-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 6. Template part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables"><a class="anchor local" href="#_variables"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>value</strong>: The text value from the editor.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_2"><a class="anchor local" href="#_configuration_2"></a>Configuration</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>studioLinkEnabled</strong>: This boolean value controls whether the 'CX Link' button is visible.
+Default is <code>false</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-parts-multiline-plain-text"><a class="anchor local" href="#template-parts-multiline-plain-text"></a>multiline-plain-text</h3>
+<div class="paragraph">
+<p>This template part supplies a single multiline input field, into which the user can input plain text.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_3"><a class="anchor local" href="#_editor_3"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/multiline-plain-text-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 7. Template part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_2"><a class="anchor local" href="#_variables_2"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>value</strong>: The text value from the editor.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_3"><a class="anchor local" href="#_configuration_3"></a>Configuration</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>studioLinkEnabled</strong>: This boolean value controls whether the 'CX Link' button is visible.
+Default is <code>false</code>.</p>
+</li>
+<li>
+<p><strong>fieldHeight</strong>: This integer value controls the field height in the form of the content editor.
+Default is <code>5</code>. The unit is <em>Eclipse Scout</em> grid height (Property 'h' in GridData).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-parts-formatted-text"><a class="anchor local" href="#template-parts-formatted-text"></a>formatted-text</h3>
+<div class="paragraph">
+<p>This template part closely mirrors the corresponding <code>formatted-text</code> element part.
+It provides a configurable HTML WYSIWYG editor.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Since this part provides a variable with HTML code, you should use the 'triple-stash' syntax of Handlebars to output the variable: <code>{{{textPart.html}}}</code>.
+Otherwise the HTML code would be escaped when the template is being rendered.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect3">
+<h4 id="_editor_4"><a class="anchor local" href="#_editor_4"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/formatted-text-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 8. Template part user interface.</div>
+</div>
+<div class="paragraph">
+<p>As with the corresponding element part, the toolbar of the editor can be configured using a <code>htmlEditorConfig</code>.
+The picture shows the current default editor.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_3"><a class="anchor local" href="#_variables_3"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>html</strong>: HTML code generated by the WYSIWYG editor</p>
+</li>
+<li>
+<p><strong>languageTag</strong>: Language tag as a string, that can be used with the <code>lang</code> HTML attribute to hint the language to e.g. screen readers</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_4"><a class="anchor local" href="#_configuration_4"></a>Configuration</h4>
+<div class="paragraph">
+<p>The template part allows the HTML editor to be configured.
+The structure is as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>htmlEditorConfigId</strong>: The ID of the editor configuration from the <code>design.json</code> that should be applied to this template part.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-parts-link"><a class="anchor local" href="#template-parts-link"></a>link</h3>
+<div class="paragraph">
+<p>An template part that provides URL and accessibility information for a link.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_5"><a class="anchor local" href="#_editor_5"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/link-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 9. Template part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_4"><a class="anchor local" href="#_variables_4"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>url</strong>: The URL for the link.</p>
+</li>
+<li>
+<p><strong>text</strong>: The link text.</p>
+</li>
+<li>
+<p><strong>description</strong>: Accessibility information that describes the link for screen readers. This can be added to the <code>aria-label</code> attribute.</p>
+</li>
+<li>
+<p><strong>openInNewWindow</strong>: Boolean value to describe where the link should be opened, can be used in conjunction with <code>target="_blank"</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_5"><a class="anchor local" href="#_configuration_5"></a>Configuration</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>textEnabled</strong>: This boolean value controls whether the text field is visible.
+Default is <code>true</code>.</p>
+</li>
+<li>
+<p><strong>descriptionEnabled</strong>: This boolean value controls whether the description field is visible.
+Default is <code>true</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-parts-image"><a class="anchor local" href="#template-parts-image"></a>image</h3>
+<div class="paragraph">
+<p>The image template part supplies all values needed to render an image in the content, including accessibility information.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_6"><a class="anchor local" href="#_editor_6"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 10. Template part user interface.</div>
+</div>
+<div class="paragraph">
+<p>The screenshot shows two possible configurations of the image template part editor:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">above</dt>
+<dd>
+<p>Alternative text is set to mandatory, the additional accessibility fields are visible.</p>
+</dd>
+<dt class="hdlist1">below</dt>
+<dd>
+<p>Alternative text is not mandatory and all accessibility fields are invisible.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The second configuration should only be used in very specific circumstances, e.g. multiple sources in a HTML <code>&lt;picture&gt;</code> tag.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_5"><a class="anchor local" href="#_variables_5"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>altText</strong>: Accessibility-feature, alternative text that is also shown if the browser cannot show the picture.</p>
+</li>
+<li>
+<p><strong>srcUrl</strong>: The URL that points to the selected image.</p>
+</li>
+<li>
+<p><strong>placeholderSrcUrl</strong>: The URL pointing to a placeholder image (used for the content editor).</p>
+</li>
+<li>
+<p><strong>srcset</strong>: Srcset-String. Only relevant if sizes have been defined in the design.</p>
+</li>
+<li>
+<p><strong>decorative</strong>: Boolean value that can be used to set the accessibility option <code>aria-hidden="true"</code>, which results in screenreaders ignoring the image entirely.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_6"><a class="anchor local" href="#_configuration_6"></a>Configuration</h4>
+<div class="paragraph">
+<p>The template part can be configured with the following values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>altTextMandatory</strong>: Makes the alternative text field in the UI mandatory.</p>
+</li>
+<li>
+<p><strong>srcsetSizes</strong>: List of size definitions, as used in the <code>srcset</code> HTML attribute, see example below.</p>
+</li>
+<li>
+<p><strong>hideAccessibilityFields</strong>: Hides all accessibility fields in the editor UI.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">"config": {
+  "hideAccessibilityFields": true,
+  "altTextMandatory": false,
+  "srcsetSizes": [
+    "400w",
+    "800w",
+    "1200w"
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-parts-checkbox"><a class="anchor local" href="#template-parts-checkbox"></a>checkbox</h3>
+<div class="paragraph">
+<p>The checkbox template part is mainly used for control-structures in the Handlebars-template.
+It supplies a simple checkbox element and a boolean value that can be used e.g. for <code>{{#if}}</code>-blocks within the content element.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_7"><a class="anchor local" href="#_editor_7"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/checkbox-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 11. Template part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_6"><a class="anchor local" href="#_variables_6"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>value</strong>: Boolean value representing the state of the checkbox. Cannot be empty.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_7"><a class="anchor local" href="#_configuration_7"></a>Configuration</h4>
+<div class="paragraph">
+<p>This template part provides no configuration options.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-parts-option"><a class="anchor local" href="#template-parts-option"></a>option</h3>
+<div class="paragraph">
+<p>The option template part is mainly used for control-structures in the Handlebars-template.
+It allows to define a list of key/value options in the design and provides the key of the option selected by the user in the content editor.</p>
+</div>
+<div class="paragraph">
+<p>Since the <code>{{#if}}</code> blocks in Handlebars do not support logical expressions, the variable from the option part is usually used with the <em>Handlebars helpers</em> <code>eq</code> and <code>neq</code>. For example such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">{{#eq imageCaptionOption.option "yes"}}
+    &lt;div class="paragraph-light news-image-description"&gt;{{image.altText}}&lt;/div&gt;
+{{/eq}}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The negation works analogous, just using <code>{{#neq a b}}</code> instead of the <code>{{#eq a b}}</code> shown in the example above.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_8"><a class="anchor local" href="#_editor_8"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/option-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 12. Template part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_7"><a class="anchor local" href="#_variables_7"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>value</strong>: The string-value of the selected option.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_8"><a class="anchor local" href="#_configuration_8"></a>Configuration</h4>
+<div class="paragraph">
+<p>The option template part needs one or more configured options that each consists of a value and a text that is displayed to the user in the editor user interface. In the Handlebars template, the value of the selected option is applied to the 'value' variable.</p>
+</div>
+<div class="paragraph">
+<p>The template part configuration is structured as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>options</strong>: List of options consisting of:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>text</strong>: Display text shown to the user in the content element editor</p>
+</li>
+<li>
+<p><strong>value</strong>: The value that is exposed in the variable context of the template part</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">"config": {
+  "options": [
+    {
+      "text": "Ja",
+      "value": "yes"
+    },
+    {
+      "text": "Nein",
+      "value": "no"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dynamic-value-list"><a class="anchor local" href="#dynamic-value-list"></a>dynamic-value-list</h3>
+<div class="paragraph">
+<p>This Handlebars template part offers functionality for the integration of BSI Suite value lists into any HTML form, providing REST endpoints for the purpose of retrieving values from such lists.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_9"><a class="anchor local" href="#_editor_9"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/dynamic-value-list-template-part.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 13. Template part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_8"><a class="anchor local" href="#_variables_8"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Value list</strong>: A reference to a BSI Suite value list.
+Mandatory.</p>
+</li>
+<li>
+<p><strong>Initial value</strong>: Optional initial value for the HTML form field.
+Only values belonging to the referenced <strong>Value list</strong> are available.
+Only editable if <strong>Value list</strong> is set.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is also possible to define an initial value within the configuration of a story, which supersedes the initial value of the content.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_backend_processing_and_html_rendering"><a class="anchor local" href="#_backend_processing_and_html_rendering"></a>Backend processing and HTML rendering</h4>
+<div class="paragraph">
+<p>The BSI backend processes dynamic value lists in the following manner:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The BSI Suite value list is defined in the content using the content editor, and this value is stored in the BSI CX database.</p>
+</li>
+<li>
+<p>During the rendering of the HTML, the ID of the value list is utilized to create a REST endpoint, and the URL of this endpoint is transmitted to and made available in the client’s DOM.</p>
+</li>
+<li>
+<p>The endpoint is invoked by the client to retrieve all values of the value list.</p>
+</li>
+<li>
+<p>The values are processed and transmitted to the BSI CX backend upon form submission, and these values can be utilized in BSI CX stories for further processing.
+The values automatically possess the correct BSI data model type.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_involved_bsi_html_attributes"><a class="anchor local" href="#_involved_bsi_html_attributes"></a>Involved BSI HTML Attributes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>data-bsi-entity-id</strong>: Holds a BSI datamodel entity ID (i.e., an ID referencing the BSI Suite value list).
+Only used at configuration time, not sent to clients.</p>
+</li>
+<li>
+<p><strong>data-bsi-entity-key-value</strong>: Holds an entity key belonging to the element’s <strong>data-bsi-entity-id</strong>.
+This value is used to set the form field’s initial value.
+Only used at configuration time, not sent to clients.
+The value of this attribute is symmetrically encrypted and set into the HTML element’s <em>value</em> attribute before the HTML is sent to any clients.</p>
+</li>
+<li>
+<p><strong>data-bsi-entity-key-display-text</strong>: Human readable label of the key stored in <strong>data-bsi-entity-key-value</strong>.
+This attribute is preserved and sent to clients.</p>
+</li>
+<li>
+<p><strong>data-bsi-rest-resource</strong>: Target endpoint to lookup values belonging to the element’s <strong>data-bsi-entity-id</strong>.
+This attribute is preserved and sent to clients.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_design_integration"><a class="anchor local" href="#_design_integration"></a>Design integration</h4>
+<div class="paragraph">
+<p>The integration process consists of two stages.
+Firstly, the BSI data model entity IDs and keys are set in the content during configuration time.
+Secondly, these values are retrieved when the HTML form is opened via REST during runtime.</p>
+</div>
+<div class="sect4">
+<h5 id="_configuration_time"><a class="anchor local" href="#_configuration_time"></a>Configuration time</h5>
+<div class="paragraph">
+<p>The Handlebars template part’s editor persists the following context variables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>dataModelValue</strong>: A nested JSON holding the BSI datamodel type and (if set) initial value key.</p>
+</li>
+<li>
+<p><strong>displayText</strong>: The initial value key’s human-readable label.
+May be empty.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">The element’s context structure.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "dataModelValue": {
+    "type": "entity:1234",
+    "value": "entity:1234:key:9876"
+  },
+  "displayText": "I belong to key 9876"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To correctly encrypt and map BSI datamodel values, the BSI CX backend expects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The HTML element tagged with <em>dynamic-value-list</em> also has to reference and set the BSI HTML attribute <em>data-bsi-entity-id</em>.
+<em>data-bsi-entity-id</em> is used to create the URL for the lookup-call.</p>
+</li>
+<li>
+<p>The HTML input on the form has to reference the BSI HTML attribute <em>data-bsi-entity-key-value</em>.
+This enables default values.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">The element’s BSI HTML attributes at configuration time.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="dynamic-value-list" data-bsi-entity-id="{{context.dataModelValue.type}}" &gt;
+    &lt;input
+      data-bsi-entity-key-value="{{context.dataModelValue.value}}"
+      data-bsi-entity-key-display-text="{{context.displayText}}" &gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_runtime"><a class="anchor local" href="#_runtime"></a>Runtime</h5>
+<div class="paragraph">
+<p>It is the frontend code’s responsibility to retrieve and display a value list’s values.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The element tagged with <em>dynamic-value-list</em> contains a REST endpoint to retrieve the values of the value list.
+It is exposed via the BSI HTML attribute <strong>data-bsi-rest-resource</strong>.
+The REST call uses the <em>GET</em> method and returns a JSON containing one attribute called <em>options</em>.
+This attribute holds a list of <em>id</em>-<em>text</em> pairs.
+The <em>id</em> is always encrypted.</p>
+</li>
+<li>
+<p>Ensure that the correct encrypted <em>id</em> is sent to the BSI CX backend on a form submit.</p>
+</li>
+<li>
+<p>The element marked with the tag "<em>dynamic-value-list</em>" contains a REST endpoint for retrieving the values of the value list, which is exposed via the BSI HTML attribute "data-bsi-rest-resource".
+The REST call utilizes the GET method and returns a JSON object containing a single attribute named "options", which holds a list of id-text pairs.
+The id is always encrypted.</p>
+</li>
+<li>
+<p>It is essential to ensure that the correct encrypted id is transmitted to the BSI CX backend upon form submission.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">An example HTML element sent to a customer opening a BSI CX landing page.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-rest-resource="http://your-client.bsi/inbound/default/r/bsi-code-rest-resource?entityId=WcaYlNlwe6VnI72" &gt;
+    &lt;input
+      value="kOi4pUb17YbVcvVlaU9-kiQW993"
+      data-bsi-entity-key-display-text="I belong to the encrypted key kOi4pUb17YbVcvVlaU9-kiQW993" &gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">An example response when calling the URL provided via <strong>data-bsi-rest-resource</strong>.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "options": [
+    {
+      "id": "kOi4pUb17YbVcvVlaU9-kiQW993",
+      "text": "label 1"
+    },
+    {
+      "id": "mRt7xQe42NcBzxTpoL3-zvER581",
+      "text": "label 2"
+    },
+    {
+      "id": "fLn2vHd89JmTqyWkdA6-wuTY764",
+      "text": "label 3"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_rest_parameters"><a class="anchor local" href="#_rest_parameters"></a>REST parameters</h5>
+<div class="paragraph">
+<p>The REST endpoint exposed via <strong>data-bsi-rest-resource</strong> accepts the following query parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>entityId</strong>: The encrypted value list type.
+Mandatory.
+This parameter is provided by the BSI CX backend and already set.
+There is no need to adapt it in the frontend.</p>
+</li>
+<li>
+<p><strong>q</strong>: Query parameter.
+Optional.
+If set, it’s value is used to perform a case-insensitive prefix search on the lookup result’s texts.
+Only matching results are sent to the client.</p>
+</li>
+<li>
+<p><strong>lang</strong>: Requested language parameter.
+Optional.
+If set, the value is used to parse a <em>JAVA</em> locale.
+The locale is used to perform the lookup and returns the result in the corresponding language.
+It is recommended to set this attribute to the DOM’s language attribute (which is normally set via BSI CX’s content engine).
+If no value is provided, the request’s language (i.e., the client’s browser language) is used.
+The last fallback is the BSI CX backend’s system language.
+Example values: <em>de-DE</em>, <em>de-CH</em>, <em>de</em>, <em>en</em>, <em>en-US</em>, <em>fr</em>, …​</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example URL. The design has to handle q and lang parameters.</div>
+<div class="content">
+<pre>http://your-client.bsi/inbound/default/r/bsi-code-rest-resource?entityId=WcaYlNlwe6VnI72&amp;q=searchVal&amp;lang=de</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The REST endpoint made available via <strong>data-bsi-rest-resource</strong> supports the following query parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>entityId</strong>: The encrypted value list type.
+Mandatory.
+This parameter is provided by the BSI CX backend and is already set, therefore no adjustments are necessary in the frontend.</p>
+</li>
+<li>
+<p><strong>q</strong>: Query parameter.
+Optional.
+If specified, its value is utilized to perform a case-insensitive prefix search on the lookup result’s texts.
+Only matching results are transmitted to the client.</p>
+</li>
+<li>
+<p><strong>lang</strong>: Requested language parameter.
+Optional.
+If specified, the value is used to parse a <em>JAVA</em> locale.
+The locale is then used to perform the lookup and return the result in the corresponding language.
+It is recommended to set this attribute to the DOM’s language attribute, which is typically set via BSI CX’s content engine.
+If no value is provided, the request’s language (i.e., the client’s browser language) is used.
+The last fallback is the BSI CX backend’s system language.
+Example values include <em>de-DE</em>, <em>de-CH</em>, <em>de</em>, <em>en</em>, <em>en-US</em>, <em>fr</em>, etc.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_how_to_create_a_content_element_using_the_value_list_part"><a class="anchor local" href="#_how_to_create_a_content_element_using_the_value_list_part"></a>How to create a content element using the value list part</h5>
+<div class="paragraph">
+<p>The element is based on the new Handlebars integration in BSI CX designs.
+To work properly with the BSI CX form engine, your element should also contain two additional template element parts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>id</strong>: A plain-text Handlebars template part to uniquely identify the form field in a form.
+Ensure that the HTML form field’s ID attribute is set to this value.
+Mandatory.</p>
+</li>
+<li>
+<p><strong>name</strong>: The form field’s label.
+Mandatory.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_minimal_example_implementation"><a class="anchor local" href="#_minimal_example_implementation"></a>Minimal example implementation</h5>
+<div class="listingblock">
+<div class="title">The example’s context .json. The content editor sets the datamodel values.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "id": {
+    "value": "dynamic-dropdown-1"
+  },
+  "name": {
+    "value": "Field"
+  },
+  "entityTypeAndInitialValue": {
+    "dataModelValue": {
+      "type": "",
+      "value": ""
+    },
+    "displayText": ""
+  }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">The examples .hbs file. The content editor sets the datamodel values.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="dynamic-value-list" data-bsi-entity-id="{{entityTypeAndInitialValue.dataModelValue.type}}" &gt;
+    &lt;label for="{{id.value}}"&gt;{{name.value}}&lt;/label&gt;
+    &lt;input id="{{id.value}}" name="{{id.value}}"
+      value="{{entityTypeAndInitialValue.displayText}}"
+      data-bsi-entity-key-value="{{entityTypeAndInitialValue.dataModelValue.value}}"
+      data-bsi-entity-key-display-text="{{entityTypeAndInitialValue.displayText}}" &gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">The element’s entry in the www-design.json file. Don’t forget to include the element in the respective dropzones.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "contentElements": [
+    {
+      "elementId": "example-dynamic-value-list",
+      "type": "template-element",
+      "file": "path/to/my-example.hbs",
+      "contextFile": "path/to/my-example.json",
+      "label": "Dynamic select",
+      "templateParts": [
+        {
+          "partId": "plain-text",
+          "partContextId": "id",
+          "label": "ID"
+        },
+        {
+          "partId": "plain-text",
+          "partContextId": "name",
+          "label": "Field name"
+        },
+        {
+          "partId": "dynamic-value-list",
+          "partContextId": "entityTypeAndInitialValue",
+          "label": "Value list"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code snippets above represent the HTML component.
+A possible method for invoking the REST endpoint is provided in the snippet below.</p>
+</div>
+<div class="listingblock">
+<div class="title">Script calling the value list endpoint.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    let $valueListElem = findValueListElement(); // Frontend code's responsibility
+    let dataSourceUrl = $valueListElem.attr('data-bsi-rest-resource');
+    fetch(dataSourceUrl, {
+      method: "GET",
+      body: new URLSearchParams({
+        q: getQueryParam($valueListElem), // Frontend code's responsibility
+        lang: document.documentElement.lang })
+    })
+    .then(response =&gt; {
+      // ... Frontend code's responsibility
+    });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to implement a dropdown including autocompletion, you may consider <a href="https://jqueryui.com/autocomplete/">JQuery UI</a> as a starting point.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="script"><a class="anchor local" href="#script"></a>script</h3>
+<div class="paragraph">
+<p>This template part contains a picker for a script from the media library and an optional JSON field for a configuration-object to supply to the script.</p>
+</div>
+<div class="sect3">
+<h4 id="_editor_10"><a class="anchor local" href="#_editor_10"></a>Editor</h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/script-template-part-editor.png" alt="Template part user interface.">
+</div>
+<div class="title">Figure 14. Template part user interface.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_variables_9"><a class="anchor local" href="#_variables_9"></a>Variables</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>scriptUrl</strong>: The url to the script on the resource server.</p>
+</li>
+<li>
+<p><strong>scriptConfig</strong>: An escaped JSON string with the configuration object.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_9"><a class="anchor local" href="#_configuration_9"></a>Configuration</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>configEditorEnabled</strong>: Enables the JSON editor for the configuration object.
+Default is <code>false</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © BSI Business Systems Integration AG.</p>
+</footer><script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/section-numbers.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/call-outs.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
