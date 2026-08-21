@@ -2,4 +2,4 @@
 
 GitHub pages for https://www.bsi-software.com/en/bsi-customer-suite/cx[BSI CX].
 
-See it online: https://bsi-software.github.io/bsi-cx-design/
+See it online: https://bsi-software.github.io/bsi-cx-design-docs
