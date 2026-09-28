@@ -554,6 +554,12 @@ The source is inserted in the <code>src</code> attribute.</p>
 Therefore it is mandatory to specify an image in the content editor.
 Otherwise a validation error will occur.</p>
 </div>
+<div class="paragraph">
+<p>The attribute <code>data-bsi-hide-link</code> controls whether the field <em>URL/internet address</em> and the checkbox <em>Open in new window</em> is visible and editable in the content editor. A design developer may still wrap the image inside an <code>&lt;a&gt;</code> tag in the content element, but the user cannot change the link.</p>
+</div>
+<div class="paragraph">
+<p>With the attribute <code>data-bsi-placeholder</code> the design developer may supply a link to an image from the design source that is used in the content editor if the selected image cannot be loaded.</p>
+</div>
 <div class="sect3">
 <h4 id="_srcset"><a class="anchor local" href="#_srcset"></a>srcset</h4>
 <div class="paragraph">
@@ -582,9 +588,6 @@ We highly recommend to set the <code>srcset</code> attribute.
     &lt;img src="example-800w.jpg" srcset="example-480w.jpg 480w, example-800w.jpg 800w" alt="Example image" data-bsi-element-part="image" /&gt;
 &lt;/div&gt;</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>The attribute <code>data-bsi-hide-link</code> controls whether the field <em>URL/internet address</em> and the checkbox <em>Open in new window</em> is visible and editable in the content editor. A design developer may still wrap the image inside an <code>&lt;a&gt;</code> tag in the content element, but the user cannot change the link.</p>
 </div>
 </div>
 <div class="sect3">
