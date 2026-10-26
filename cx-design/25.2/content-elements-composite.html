@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: BSI CX Design Usage Documentation</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" type="image/svg+xml" href="../../_/pink-logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../_/apple-touch-icon.png">
+    <link rel="mask-icon" href="../../_/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="msapplication-config" href="../../_/browserconfig.xml">
+    <link rel="manifest" href="../../_/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="article cx-design">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">BSI CX Design Usage Documentation</a>
+      <div class="navbar-item search hide-for-print" role="search">
+        <div id="search-field" class="field">
+          <input id="search-input" type="search" placeholder="Search" >
+        </div>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item navbar-item-logo">
+          <span class="logo">
+              <a href="https://www.bsi-software.com/"><img src="../Overview/index.html/../../../_/img/bsi-logo-inverted.svg" alt="BSI"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="cx-design" data-version="25.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">CX Design Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design-json.html">design.json</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle" aria-label="open or close"></button>
+    <span class="nav-text">Content Elements and Parts</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-elements.html">Content Elements and Parts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-elements-parts.html">Element Parts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-elements-template-parts.html">Template Parts</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="content-elements-composite.html">Composite Content Elements</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-editor.html">Content Editor</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cx-design-build.html">CX Design Build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="migration-guide.html">Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">CX Design Documentation</span>
+    <span class="version">25.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../Overview/index.html">CX Design Documentation</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Overview/index.html">Overview</a>
+        </li>
+        <li class="version">
+          <a href="../26.2/index.html">26.2</a>
+        </li>
+        <li class="version">
+          <a href="../26.1/index.html">26.1</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">25.2</a>
+        </li>
+        <li class="version">
+          <a href="../24.2/index.html">24.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../Overview/index.html" class="home-link" aria-label="Home"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">CX Design Documentation</a></li>
+    <li>Content Elements and Parts</li>
+    <li><a href="content-elements-composite.html">Composite Content Elements</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">25.2</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../Overview/index.html">Overview</a>
+    <a class="version" href="../26.2/content-elements-composite.html">26.2</a>
+    <a class="version is-missing" href="../26.1/index.html">26.1</a>
+    <a class="version is-current" href="content-elements-composite.html">25.2</a>
+    <a class="version is-missing" href="../24.2/index.html">24.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="composite-content-elements"><a class="anchor local" href="#composite-content-elements"></a>Composite Content Elements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>What do we mean with the term 'composite'?
+A composite is a content element with pre-filled dropzones.
+The contents of these dropzones are other, existing content elements from the design.</p>
+</div>
+<div class="paragraph">
+<p>A practical example for a composite is a content element with two columns, where the left column contains an image content element and the right column contains a text content element.</p>
+</div>
+<div class="paragraph">
+<p>You can build composites with classic HTML content elements or with Handlebars content elements.
+To keep things simple and clean, we recommend to build composites where all nested content elements have the same type: Handlebars or HTML.
+However, it is possible to mix the two types in a composite, but there are a few things to keep in mind when doing so.
+We talk about the 'mixed' case in the chapter below.</p>
+</div>
+<div class="paragraph">
+<p>The following considerations apply for cases where the composite content element is of type Handlebars or contains a nested Handlebars content element.</p>
+</div>
+<div class="sect2">
+<h3 id="_design_json"><a class="anchor local" href="#_design_json"></a>Design.json</h3>
+<div class="paragraph">
+<p>You must only define <em>template parts</em> for the root element.</p>
+</div>
+<div class="paragraph">
+<p>It is also permitted for the root element to have no template parts.</p>
+</div>
+<div class="paragraph">
+<p>The template parts for the nested content elements are defined in the corresponding content elements in the <code>design.json</code>.
+Thus, you must not redefine these template parts for the composite.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example design.json (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "elementId": "two-column-composite",
+  "type": "template-element",
+  "file": "content-elements/two-column-composite.hbs",
+  "contextFile": "content-elements/two-column-composite.json",
+  "icon": "two-columns",
+  "label": "Two columns with sample content",
+  "templateParts": [
+    {
+      "partId": "plain-text",
+      "partContextId": "title",
+      "label": "Composite title"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_template_code"><a class="anchor local" href="#_example_template_code"></a>Example Template Code</h3>
+<div class="listingblock">
+<div class="title">Example two-column-composite.hbs</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="two-column-composite" data-bsi-context-scope="root"&gt;
+  &lt;p&gt;{{root.text.value}}&lt;/p&gt;
+  &lt;div data-bsi-dropzone="dzl"&gt;
+    &lt;div data-bsi-element="image" data-bsi-context-scope="dzl_image"&gt;
+      &lt;img src="{{dzl_image.image.url}}"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div data-bsi-dropzone="dzr"&gt;
+    &lt;div data-bsi-element="plain-text" data-bsi-context-scope="dzr_text"&gt;{{dzr_text.text.value}}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Every <em>nested</em> content element used in a composite needs to exist as a stand-alone element.
+The root (DOM) element of a composite content element, exists on its own.
+If the design had a 'two-column' content element too, which could be used stand-alone, outside the composite, this would be an independent content element with its own name.
+In a complex design build, you would use <em>includes</em> to re-use the contents from a <code>two-columns.hbs</code> file.
+So the content-element 'two-column' and 'two-column-composite' would have identical contents but different <code>elementId</code> properties.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>A composite element needs to be built-up like building <code>design.hbs</code>: Every constituent element needs a <code>data-bsi-context-scope</code> and this scope is then used to assemble the element context.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_provide_context"><a class="anchor local" href="#_provide_context"></a>Provide Context</h3>
+<div class="paragraph">
+<p>You must provide a context JSON for the whole composite, including child content elements.
+The root element and each nested content element must have their own 'context scope'.
+You must always define the context scopes as top level properties in the JSON.
+Do not use nested JSON properties for context scopes.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example context.json</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "root": {
+    "text": {
+      "value": "Composite title"
+    }
+  },
+  "dzl_image": {
+    "image": {
+      "url": "https://example.org/picture.png"
+    }
+  },
+  "dzr_text": {
+    "text": {
+      "value": "Text on the right side."
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please consider the following naming convention for context scope names:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The name must not contain dot (.) characters.
+In Handlebars this character is used for nested JSON objects.</p>
+</li>
+<li>
+<p>Recommendation: use camel case for compound words. Example: <code>rightText.text.value</code></p>
+</li>
+<li>
+<p>Recommendation: use underscores for hierarchical paths. Example: <code>dzr_0_rightText.text.value</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mixed_composite_content_elements"><a class="anchor local" href="#_mixed_composite_content_elements"></a>Mixed Composite Content Elements</h3>
+<div class="paragraph">
+<p>When we have a 'mixed' composite, we have a composition of content elements with mixed types: Handlebars and HTML.
+The following combinations are possible and supported in a composite:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML &gt; HTML</p>
+</li>
+<li>
+<p>Handlebars &gt; Handlebars</p>
+</li>
+<li>
+<p>Handlebars &gt; HTML</p>
+</li>
+<li>
+<p>HTML &gt; Handlebars</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If at least one content element in the chain of nested content elements is of type Handlebars, the <code>design.json</code> must provide a <code>contextFile</code> for the included Handlebars content elements, even if the root level content element is of type HTML.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example design.json (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "elementId": "html-hbs-comp",
+  "file": "content-elements/html/html-hbs-comp.html",
+  "label": "Nested composite HTML &gt; Handlebars",
+  "contextFile": "content-elements/html/html-hbs-comp.json"
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example html-hbs-comp.html</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div data-bsi-element="html-hbs-comp" class="html-hbs-comp"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-12 col-md-6 bsi-column bsi-column-1" data-bsi-dropzone="dzl"&gt;
+      &lt;div data-bsi-element="f2l8rp" data-bsi-context-scope="dzl_0" class="f2l8rp bsi-button"&gt;
+        &lt;a role="button" class="btn" href="{{ dzl_0.button.url }}"&gt;{{ dzl_0.button.text }}&lt;/a&gt;
+        &lt;label hidden class="bsi-icon-identifier"&gt;{{ dzl_0.icon.value }}&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-sm-12 col-md-6 bsi-column bsi-column-2" data-bsi-dropzone="dzr"&gt;
+      &lt;div data-bsi-element="f2l8rp" data-bsi-context-scope="dzr_0" class="f2l8rp bsi-button"&gt;
+        &lt;a role="button" class="btn" href="{{ dzr_0.button.url }}"&gt;{{ dzr_0.button.text }}&lt;/a&gt;
+        &lt;label hidden class="bsi-icon-identifier"&gt;{{ dzr_0.icon.value }}&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example html-hbs-comp.json (context)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "dzl_0": {
+    "button": {
+      "url": "https://www.example.com",
+      "text": "Left button",
+      "openInNewWindow": false
+    },
+    "icon": {
+      "value": "arrow-right"
+    }
+  },
+  "dzr_0": {
+    "button": {
+      "url": "https://www.example.com",
+      "text": "Right button",
+      "openInNewWindow": false
+    },
+    "icon": {
+      "value": "arrow-right"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_create_unique_context_scope_names"><a class="anchor local" href="#_how_to_create_unique_context_scope_names"></a>How to create unique context scope names</h3>
+<div class="paragraph">
+<p>When you work with a flexible design system for BSI CX with re-usable content elements, you should delegate the task of building technical correct, consistent and unique context scopes to a build process or -script.
+In the same way, the creation of context JSON files should be automated, so that context scope names in the template and in the JSON files are consistent.</p>
+</div>
+<div class="paragraph">
+<p>The algorithm that calculates the context scope identifier should consider the hierarchy within the composite, the dropzone names and the position of the content element within a dropzone.</p>
+</div>
+<div class="paragraph">
+<p>The following scope identifier <code>dzr_0.button.url</code> is from the composite example above.
+The scope is for the button content-element on the first position in the right dropzone of the two column root content element.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © BSI Business Systems Integration AG.</p>
+</footer><script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/section-numbers.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/call-outs.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

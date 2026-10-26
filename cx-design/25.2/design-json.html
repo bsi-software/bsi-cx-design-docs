@@ -59,6 +59,24 @@
     <a class="nav-link" href="design-json.html">design.json</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle" aria-label="open or close"></button>
+    <span class="nav-text">Content Elements and Parts</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-elements.html">Content Elements and Parts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-elements-parts.html">Element Parts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-elements-template-parts.html">Template Parts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-elements-composite.html">Composite Content Elements</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="content-editor.html">Content Editor</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -342,7 +360,7 @@ BSI CX 25/1
 </tbody></table>
 </div>
 <div class="paragraph">
-<p>If the schema version is set to 25.1, this enables the new Handlebars content element feature.</p>
+<p>If the schema version is set to <code>25.1</code>, this enables the new Handlebars content element feature.</p>
 </div>
 <div class="listingblock">
 <div class="title">Metadata for a Handlebars content element</div>
@@ -384,52 +402,8 @@ BSI CX 25/1
 </tr>
 </tbody></table>
 </div>
-<div class="sect3">
-<h4 id="_special_case_composite_elements"><a class="anchor local" href="#_special_case_composite_elements"></a>Special Case: Composite Elements</h4>
 <div class="paragraph">
-<p>Composites for Handlebars Elements have to be declared separately, as such:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "elementId": "two-column-with-content",
-  "type": "template-element",
-  "composite": true, <i class="conum" data-value="1"></i><b>(1)</b>
-  "file": "content-elements/content/two-column-with-content.hbs",
-  "contextFile": "content-elements/content/two-column-with-content.json",
-  "icon": "two-columns",
-  "label": "Zweispalter mit Beispielinhalt"
-} <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tbody><tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The new attribute <code>composite</code> needs to be set to <code>true</code> explicitly.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>No <em>Template Parts</em> are explicitly set. They are defined in the non-composite content elements that make up the composite.</td>
-</tr>
-</tbody></table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tbody><tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Every content element used in a composite needs to exist as a stand-alone element.
-If the stand-alone element should not be visible in the content editor, it can be hidden using <code>"hidden": true</code>.
-</td>
-</tr>
-</tbody></table>
-</div>
-<div class="paragraph">
-<p>A composite element needs to be built-up like building <code>design.hbs</code>: Every constituent element needs a <code>data-bsi-context-scope</code> and this scope is then used to assemble the element context.</p>
-</div>
+<p>For more details about Handlebars content elements see the chapter <a href="content-elements-template-parts.html" class="xref page">Template Parts</a>.</p>
 </div>
 </div>
 </div>
@@ -444,7 +418,7 @@ If the stand-alone element should not be visible in the content editor, it can b
 <p>To do so, the <code>archived</code> attribute of corresponding elements are set to <code>true</code> in the <code>design.json</code> file.</p>
 </div>
 <div class="paragraph">
-<p>Archived elements are still available in the design, but are no longer accessible in the content editor in the selection list of elements. Therefore it is no longer possible to insert them into a content. If they are already contained in a content, they can still be edited and moved, but can no longer be copied or pasted.</p>
+<p>Archived elements are still available in the design, but are no longer accessible in the content editor in the selection list of elements. Therefore, it is no longer possible to insert them into a content. If they are already contained in a content, they can still be edited and moved, but can no longer be copied or pasted.</p>
 </div>
 <div class="listingblock">
 <div class="title">Marking a content element as <code>archived</code></div>
